@@ -1,0 +1,43 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1120 400' role='img' aria-label='Receiving USDT: from the counterparty to the main wallet'>
+<rect width='1120' height='400' fill='#ffffff'/>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='context-stroke'/></marker></defs>
+<text x='24' y='30' font-size='16' font-weight='700' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Receiving USDT: from the counterparty to the main wallet</text>
+<rect x='30' y='70' width='110' height='60' rx='8' fill='#ffffff' stroke='#1f2933' stroke-width='1.5'/>
+<text x='85.0' y='105.0' text-anchor='middle' font-size='13' font-weight='400' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Counterparty</text>
+<rect x='190' y='70' width='170' height='60' rx='8' fill='#ffffff' stroke='#0f7a6e' stroke-width='1.5'/>
+<text x='275.0' y='96.0' text-anchor='middle' font-size='13' font-weight='600' fill='#0f7a6e' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Deposit address</text>
+<text x='275.0' y='114.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>USDT</text>
+<rect x='410' y='70' width='160' height='60' rx='8' fill='#ffffff' stroke='#1f2933' stroke-width='1.5'/>
+<text x='490.0' y='96.0' text-anchor='middle' font-size='13' font-weight='600' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Block scanner</text>
+<text x='490.0' y='114.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>solid block ≈ 1 min</text>
+<rect x='620' y='70' width='170' height='60' rx='8' fill='#ffffff' stroke='#1f2933' stroke-width='1.5'/>
+<text x='705.0' y='96.0' text-anchor='middle' font-size='13' font-weight='600' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Deposit recorded</text>
+<text x='705.0' y='114.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>confirmed</text>
+<line x1='140' y1='100' x2='190' y2='100' stroke='#0f7a6e' stroke-width='1.5' marker-end='url(#arrow)'/>
+<text x='165.0' y='92.0' text-anchor='middle' font-size='11' fill='#0f7a6e' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>USDT</text>
+<line x1='360' y1='100' x2='410' y2='100' stroke='#7b8794' stroke-width='1.5' marker-end='url(#arrow)'/>
+<line x1='570' y1='100' x2='620' y2='100' stroke='#7b8794' stroke-width='1.5' marker-end='url(#arrow)'/>
+<text x='850' y='110' text-anchor='start' font-size='11' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Below minimum: rejected (dust)</text>
+<path d='M705,130 L705,220' fill='none' stroke='#7b8794' stroke-width='1.5' marker-end='url(#arrow)'/>
+<text x='705' y='180' text-anchor='middle' font-size='11' fill='#7b8794' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>≥ 20 USDT or older than 72 h</text>
+<rect x='600' y='220' width='210' height='70' rx='8' fill='#ffffff' stroke='#0f7a6e' stroke-width='1.5'/>
+<text x='705.0' y='251.0' text-anchor='middle' font-size='13' font-weight='600' fill='#0f7a6e' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Sweep</text>
+<text x='705.0' y='269.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>sweeping · energy · signature</text>
+<rect x='880' y='220' width='200' height='70' rx='8' fill='#ffffff' stroke='#0f7a6e' stroke-width='1.5'/>
+<text x='980.0' y='251.0' text-anchor='middle' font-size='13' font-weight='600' fill='#0f7a6e' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Main wallet</text>
+<text x='980.0' y='269.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>swept</text>
+<line x1='810' y1='255' x2='880' y2='255' stroke='#0f7a6e' stroke-width='1.5' marker-end='url(#arrow)'/>
+<text x='845.0' y='247.0' text-anchor='middle' font-size='11' fill='#0f7a6e' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>full amount</text>
+<rect x='30' y='220' width='250' height='60' rx='8' fill='#ffffff' stroke='#b7791f' stroke-width='1.5'/>
+<text x='155.0' y='246.0' text-anchor='middle' font-size='13' font-weight='600' fill='#b7791f' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Pool (TRX)</text>
+<text x='155.0' y='264.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>address activation when needed</text>
+<rect x='30' y='310' width='250' height='60' rx='8' fill='#ffffff' stroke='#b7791f' stroke-width='1.5'/>
+<text x='155.0' y='336.0' text-anchor='middle' font-size='13' font-weight='600' fill='#b7791f' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Energy</text>
+<text x='155.0' y='354.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>pool stake; optional itrx.io rental</text>
+<rect x='330' y='310' width='240' height='60' rx='8' fill='#ffffff' stroke='#7c3aed' stroke-width='1.5'/>
+<text x='450.0' y='336.0' text-anchor='middle' font-size='13' font-weight='600' fill='#7c3aed' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Signer</text>
+<text x='450.0' y='354.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>signs only transfers to the main wallet</text>
+<line x1='280' y1='250' x2='600' y2='250' stroke='#b7791f' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M280,340 L310,340 L310,265 L600,265' fill='none' stroke='#b7791f' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M570,340 L640,290' fill='none' stroke='#7c3aed' stroke-width='1.5' stroke-dasharray='6 4' marker-end='url(#arrow)'/>
+</svg>

@@ -1,0 +1,162 @@
+{
+  "baseUrl": "http://127.0.0.1:8080",
+  "source": "Built admin app, intercepted demo API; all external requests blocked",
+  "screenshots": [
+    {
+      "file": "setup-network.ru.png",
+      "path": "/setup",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "setup-account.ru.png",
+      "path": "/setup",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "wallet-create.ru.png",
+      "path": "/wallet",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "wallet.ru.png",
+      "path": "/wallet",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "pool-funding.ru.png",
+      "path": "/wallet",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "itrx-settings.ru.png",
+      "path": "/settings",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "itrx-connected.ru.png",
+      "path": "/settings",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "address-create.ru.png",
+      "path": "/wallet",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "address-ready.ru.png",
+      "path": "/wallet",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "addresses.ru.png",
+      "path": "/addresses",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "deposits.ru.png",
+      "path": "/deposits",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "sweeps.ru.png",
+      "path": "/sweeps",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "payout-create.ru.png",
+      "path": "/payouts",
+      "language": "ru",
+      "demo": true
+    },
+    {
+      "file": "setup-network.en.png",
+      "path": "/setup",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "setup-account.en.png",
+      "path": "/setup",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "wallet-create.en.png",
+      "path": "/wallet",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "wallet.en.png",
+      "path": "/wallet",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "pool-funding.en.png",
+      "path": "/wallet",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "itrx-settings.en.png",
+      "path": "/settings",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "itrx-connected.en.png",
+      "path": "/settings",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "address-create.en.png",
+      "path": "/wallet",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "address-ready.en.png",
+      "path": "/wallet",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "addresses.en.png",
+      "path": "/addresses",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "deposits.en.png",
+      "path": "/deposits",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "sweeps.en.png",
+      "path": "/sweeps",
+      "language": "en",
+      "demo": true
+    },
+    {
+      "file": "payout-create.en.png",
+      "path": "/payouts",
+      "language": "en",
+      "demo": true
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1120 224' role='img' aria-label='Восстановление из полного архива'>
+<rect width='1120' height='224' fill='#ffffff'/>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='context-stroke'/></marker></defs>
+<text x='24' y='30' font-size='16' font-weight='700' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Восстановление из полного архива</text>
+<rect x='24.0' y='64' width='244.0' height='108' rx='12' fill='#f5faf9' stroke='#0f7a6e' stroke-width='1.5'/>
+<circle cx='44.0' cy='84' r='11' fill='#0f7a6e'/>
+<text x='44.0' y='88' text-anchor='middle' font-size='12' font-weight='700' fill='#ffffff' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>1</text>
+<text x='146.0' y='116' text-anchor='middle' font-size='16' font-weight='600' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Та же версия проекта</text>
+<text x='146.0' y='143' text-anchor='middle' font-size='12' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Docker + Python + архив</text>
+<line x1='271.0' y1='120' x2='297.0' y2='120' stroke='#0f7a6e' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='300.0' y='64' width='244.0' height='108' rx='12' fill='#f5faf9' stroke='#0f7a6e' stroke-width='1.5'/>
+<circle cx='320.0' cy='84' r='11' fill='#0f7a6e'/>
+<text x='320.0' y='88' text-anchor='middle' font-size='12' font-weight='700' fill='#ffffff' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>2</text>
+<text x='422.0' y='116' text-anchor='middle' font-size='16' font-weight='600' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>restore.sh + архив</text>
+<text x='422.0' y='143' text-anchor='middle' font-size='12' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Введите RESTORE</text>
+<line x1='547.0' y1='120' x2='573.0' y2='120' stroke='#0f7a6e' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='576.0' y='64' width='244.0' height='108' rx='12' fill='#f5faf9' stroke='#0f7a6e' stroke-width='1.5'/>
+<circle cx='596.0' cy='84' r='11' fill='#0f7a6e'/>
+<text x='596.0' y='88' text-anchor='middle' font-size='12' font-weight='700' fill='#ffffff' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>3</text>
+<text x='698.0' y='116' text-anchor='middle' font-size='16' font-weight='600' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Данные восстановлены</text>
+<text x='698.0' y='143' text-anchor='middle' font-size='12' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Службы запустятся сами</text>
+<line x1='823.0' y1='120' x2='849.0' y2='120' stroke='#0f7a6e' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='852.0' y='64' width='244.0' height='108' rx='12' fill='#f5faf9' stroke='#0f7a6e' stroke-width='1.5'/>
+<circle cx='872.0' cy='84' r='11' fill='#0f7a6e'/>
+<text x='872.0' y='88' text-anchor='middle' font-size='12' font-weight='700' fill='#ffffff' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>4</text>
+<text x='974.0' y='116' text-anchor='middle' font-size='16' font-weight='600' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Прежний вход</text>
+<text x='974.0' y='143' text-anchor='middle' font-size='12' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Тот же пароль и аутентификатор</text>
+<text x='24' y='205' text-anchor='start' font-size='13' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>На существующей установке сначала создаётся отдельный полный бэкап для отката.</text>
+</svg>

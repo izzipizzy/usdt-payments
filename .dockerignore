@@ -1,0 +1,16 @@
+.git
+**/node_modules
+**/dist
+**/coverage
+**/*.tsbuildinfo
+.env
+.env.*
+!.env.example
+secrets
+backup
+backup-*
+backups
+*.dump
+*.log
+**/__pycache__
+.stack.lock

@@ -1,0 +1,33 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1040 440' role='img' aria-label='Wallets: everything derives from one seed phrase'>
+<rect width='1040' height='440' fill='#ffffff'/>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='context-stroke'/></marker></defs>
+<text x='24' y='30' font-size='16' font-weight='700' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Wallets: everything derives from one seed phrase</text>
+<rect x='30' y='190' width='250' height='70' rx='8' fill='#ffffff' stroke='#7c3aed' stroke-width='1.5'/>
+<text x='155.0' y='221.0' text-anchor='middle' font-size='13' font-weight='600' fill='#7c3aed' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>12 or 24 words</text>
+<text x='155.0' y='239.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>stored only in the signer, encrypted</text>
+<rect x='360' y='60' width='250' height='60' rx='8' fill='#ffffff' stroke='#0f7a6e' stroke-width='1.5'/>
+<text x='485.0' y='86.0' text-anchor='middle' font-size='13' font-weight='600' fill='#0f7a6e' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Deposit addresses</text>
+<text x='485.0' y='104.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>branch 0 · counterparty / invoice</text>
+<text x='630' y='96' text-anchor='start' font-size='11' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>operator creates in admin UI; USDT arrives here</text>
+<line x1='280' y1='225' x2='360' y2='90' stroke='#7b8794' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='360' y='150' width='250' height='60' rx='8' fill='#ffffff' stroke='#b7791f' stroke-width='1.5'/>
+<text x='485.0' y='176.0' text-anchor='middle' font-size='13' font-weight='600' fill='#b7791f' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Pool</text>
+<text x='485.0' y='194.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>branch 1 · TRX only</text>
+<text x='630' y='186' text-anchor='start' font-size='11' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>operator adds TRX: activations and energy</text>
+<line x1='280' y1='225' x2='360' y2='180' stroke='#7b8794' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='360' y='240' width='250' height='60' rx='8' fill='#ffffff' stroke='#0f7a6e' stroke-width='1.5'/>
+<text x='485.0' y='266.0' text-anchor='middle' font-size='13' font-weight='600' fill='#0f7a6e' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Main wallet</text>
+<text x='485.0' y='284.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>branch 2 · the whole USDT balance</text>
+<text x='630' y='276' text-anchor='start' font-size='11' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>sweeps land here, payouts leave from here</text>
+<line x1='280' y1='225' x2='360' y2='270' stroke='#7b8794' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='360' y='330' width='250' height='60' rx='8' fill='#ffffff' stroke='#0f7a6e' stroke-width='1.5'/>
+<text x='485.0' y='356.0' text-anchor='middle' font-size='13' font-weight='600' fill='#0f7a6e' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>One-time addresses</text>
+<text x='485.0' y='374.0' text-anchor='middle' font-size='11' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>branch 3 · one per payout</text>
+<text x='630' y='366' text-anchor='start' font-size='11' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>one address for the two payout stages</text>
+<line x1='280' y1='225' x2='360' y2='360' stroke='#7b8794' stroke-width='1.5' marker-end='url(#arrow)'/>
+<text x='320' y='180' text-anchor='middle' font-size='11' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>key derivation</text>
+<path d='M485,55 L485,60' fill='none' stroke='#0f7a6e' stroke-width='1.5' marker-end='url(#arrow)'/>
+<text x='485' y='45' text-anchor='middle' font-size='11' fill='#0f7a6e' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>counterparty → USDT</text>
+<path d='M485,145 L485,150' fill='none' stroke='#b7791f' stroke-width='1.5' marker-end='url(#arrow)'/>
+<text x='485' y='135' text-anchor='middle' font-size='11' fill='#b7791f' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>operator → TRX</text>
+</svg>

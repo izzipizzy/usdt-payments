@@ -1,0 +1,377 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Network {
+  mainnet
+  nile
+}
+
+enum AddressStatus {
+  available
+  assigned
+  suspended
+  retired
+}
+
+enum OnchainStatus {
+  inactive
+  activated
+}
+
+enum DepositStatus {
+  confirmed
+  credited
+  sweeping
+  swept
+  rejected
+}
+
+enum SweepStatus {
+  planned
+  activating
+  energy_pending
+  ready
+  signing
+  broadcast
+  confirmed
+  failed
+  abandoned
+  superseded
+}
+
+enum PayoutStatus {
+  planned
+  energy_pending
+  ready
+  signing
+  broadcast
+  confirmed
+  failed
+  cancelled
+}
+
+enum EnergySource {
+  rental
+  own_pool
+  burn
+  none
+}
+
+enum ResourceOpKind {
+  rent_energy
+  delegate_energy
+  undelegate_energy
+  activate
+  send_trx
+  rent_bandwidth
+}
+
+enum ResourceOpStatus {
+  requested
+  delivered
+  failed
+  reclaimed
+  expired
+}
+
+/// HD wallet metadata. The seed lives in the signer; core stores the account xpub only.
+model Wallet {
+  id           BigInt   @id @default(autoincrement())
+  name         String   @unique
+  network      Network
+  xpub         String
+  signerKeyId  String   @default("default") @map("signer_key_id")
+  nextIndex    Int      @default(0) @map("next_index")
+  isActive     Boolean  @default(true) @map("is_active")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+  addresses    DepositAddress[]
+
+  @@map("wallets")
+}
+
+model DepositAddress {
+  id                BigInt        @id @default(autoincrement())
+  walletId          BigInt        @map("wallet_id")
+  wallet            Wallet        @relation(fields: [walletId], references: [id])
+  derivationIndex   Int           @map("derivation_index")
+  address           String        @unique @db.VarChar(34)
+  addressHex        String        @unique @map("address_hex") @db.Char(42)
+  publicKey         String        @map("public_key")
+  alias             String?       @unique
+  status            AddressStatus @default(available)
+  onchainStatus     OnchainStatus @default(inactive) @map("onchain_status")
+  activatedAt       DateTime?     @map("activated_at")
+  usdtBalanceCached BigInt        @default(0) @map("usdt_balance_cached")
+  balanceCheckedAt  DateTime?     @map("balance_checked_at")
+  oldestUnsweptAt   DateTime?     @map("oldest_unswept_at")
+  lastDepositAt     DateTime?     @map("last_deposit_at")
+  lastSweepAt       DateTime?     @map("last_sweep_at")
+  suspendReason     String?       @map("suspend_reason")
+  metadata          Json?
+  createdAt         DateTime      @default(now()) @map("created_at")
+  updatedAt         DateTime      @updatedAt @map("updated_at")
+  deposits          Deposit[]
+  sweeps            Sweep[]
+
+  @@unique([walletId, derivationIndex])
+  @@index([status, usdtBalanceCached])
+  @@index([oldestUnsweptAt])
+  @@map("deposit_addresses")
+}
+
+model ChainCursor {
+  id             Int      @id @default(autoincrement())
+  network        Network
+  kind           String   @default("solid")
+  blockNumber    BigInt   @map("block_number")
+  blockHash      String?  @map("block_hash")
+  blockTimestamp DateTime? @map("block_timestamp")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@unique([network, kind])
+  @@map("chain_cursors")
+}
+
+/// Inbox of raw Transfer logs that target one of our addresses. Idempotent by (network, tx, log index).
+model ChainEvent {
+  id             BigInt    @id @default(autoincrement())
+  network        Network
+  txId           String    @map("tx_id") @db.Char(64)
+  logIndex       Int       @map("log_index")
+  blockNumber    BigInt    @map("block_number")
+  blockTimestamp DateTime  @map("block_timestamp")
+  contractHex    String    @map("contract_hex") @db.Char(42)
+  fromHex        String    @map("from_hex") @db.Char(42)
+  toHex          String    @map("to_hex") @db.Char(42)
+  amount         BigInt
+  receiptResult  String    @map("receipt_result")
+  raw            Json
+  processedAt    DateTime? @map("processed_at")
+  ignoredReason  String?   @map("ignored_reason")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  deposit        Deposit?
+
+  @@unique([network, txId, logIndex])
+  @@index([toHex])
+  @@index([blockNumber])
+  @@map("chain_events")
+}
+
+model Deposit {
+  id               BigInt         @id @default(autoincrement())
+  depositAddressId BigInt         @map("deposit_address_id")
+  depositAddress   DepositAddress @relation(fields: [depositAddressId], references: [id])
+  chainEventId     BigInt         @unique @map("chain_event_id")
+  chainEvent       ChainEvent     @relation(fields: [chainEventId], references: [id])
+  txId             String         @map("tx_id") @db.Char(64)
+  logIndex         Int            @map("log_index")
+  blockNumber      BigInt         @map("block_number")
+  fromAddress      String         @map("from_address") @db.VarChar(34)
+  amount           BigInt
+  status           DepositStatus  @default(confirmed)
+  confirmedAt      DateTime       @map("confirmed_at")
+  creditedAt       DateTime?      @map("credited_at")
+  sweptAt          DateTime?      @map("swept_at")
+  sweepId          BigInt?        @map("sweep_id")
+  sweep            Sweep?         @relation(fields: [sweepId], references: [id])
+  rejectReason     String?        @map("reject_reason")
+  createdAt        DateTime       @default(now()) @map("created_at")
+  updatedAt        DateTime       @updatedAt @map("updated_at")
+  sweepDeposits    SweepDeposit[]
+
+  @@unique([txId, logIndex])
+  @@index([depositAddressId, status])
+  @@index([status])
+  @@map("deposits")
+}
+
+model Sweep {
+  id               BigInt         @id @default(autoincrement())
+  depositAddressId BigInt         @map("deposit_address_id")
+  depositAddress   DepositAddress @relation(fields: [depositAddressId], references: [id])
+  collectorAddress String         @map("collector_address") @db.VarChar(34)
+  amount           BigInt
+  status           SweepStatus    @default(planned)
+  energySource     EnergySource   @default(none) @map("energy_source")
+  energyEstimated  Int?           @map("energy_estimated")
+  energyUsed       Int?           @map("energy_used")
+  bandwidthUsed    Int?           @map("bandwidth_used")
+  trxFeeBurnedSun  BigInt?        @map("trx_fee_burned_sun")
+  resourceCostSun  BigInt?        @map("resource_cost_sun")
+  txId             String?        @unique @map("tx_id") @db.Char(64)
+  refBlockBytes    String?        @map("ref_block_bytes")
+  refBlockHash     String?        @map("ref_block_hash")
+  expiration       DateTime?
+  unsignedRaw      Json?          @map("unsigned_raw")
+  signedRaw        Json?          @map("signed_raw")
+  broadcastAt      DateTime?      @map("broadcast_at")
+  confirmedAt      DateTime?      @map("confirmed_at")
+  attempt          Int            @default(0)
+  lastError        String?        @map("last_error")
+  supersededById   BigInt?        @map("superseded_by")
+  forced           Boolean        @default(false)
+  createdAt        DateTime       @default(now()) @map("created_at")
+  updatedAt        DateTime       @updatedAt @map("updated_at")
+  deposits         Deposit[]
+  sweepDeposits    SweepDeposit[]
+  resourceOps      ResourceOperation[]
+
+  @@index([status])
+  @@index([depositAddressId, status])
+  @@map("sweeps")
+}
+
+model SweepDeposit {
+  sweepId   BigInt  @map("sweep_id")
+  depositId BigInt  @map("deposit_id")
+  sweep     Sweep   @relation(fields: [sweepId], references: [id])
+  deposit   Deposit @relation(fields: [depositId], references: [id])
+
+  @@id([sweepId, depositId])
+  @@map("sweep_deposits")
+}
+
+model ResourceOperation {
+  id              BigInt           @id @default(autoincrement())
+  sweepId         BigInt?          @map("sweep_id")
+  sweep           Sweep?           @relation(fields: [sweepId], references: [id])
+  payoutId        BigInt?          @map("payout_id")
+  payout          Payout?          @relation(fields: [payoutId], references: [id])
+  targetAddress   String           @map("target_address") @db.VarChar(34)
+  kind            ResourceOpKind
+  provider        String
+  externalOrderId String?          @map("external_order_id")
+  idempotencyKey  String           @unique @map("idempotency_key")
+  energyAmount    Int?             @map("energy_amount")
+  bandwidthAmount Int?             @map("bandwidth_amount")
+  costSun         BigInt?          @map("cost_sun")
+  status          ResourceOpStatus @default(requested)
+  txId            String?          @map("tx_id") @db.Char(64)
+  expiresAt       DateTime?        @map("expires_at")
+  providerPayload Json?            @map("provider_payload")
+  lastError       String?          @map("last_error")
+  createdAt       DateTime         @default(now()) @map("created_at")
+  updatedAt       DateTime         @updatedAt @map("updated_at")
+
+  @@unique([provider, externalOrderId])
+  @@index([sweepId])
+  @@index([status, expiresAt])
+  @@map("resource_operations")
+}
+
+/// Outgoing USDT payment from the hot payout wallet (account 2 of the phrase).
+model Payout {
+  id              BigInt       @id @default(autoincrement())
+  externalId      String       @unique @map("external_id")
+  fromAddress     String       @map("from_address") @db.VarChar(34)
+  /// One-time hop address (phrase account 3, index = payout id). Stage 1: from → via, stage 2: via → to.
+  viaAddress      String?      @map("via_address") @db.VarChar(34)
+  toAddress       String       @map("to_address") @db.VarChar(34)
+  stage           Int          @default(1)
+  hop1TxId        String?      @unique @map("hop1_tx_id") @db.Char(64)
+  hop1ConfirmedAt DateTime?    @map("hop1_confirmed_at")
+  amount          BigInt
+  note            String?
+  status          PayoutStatus @default(planned)
+  energySource    EnergySource @default(none) @map("energy_source")
+  energyEstimated Int?         @map("energy_estimated")
+  energyUsed      Int?         @map("energy_used")
+  resourceCostSun BigInt?      @map("resource_cost_sun")
+  trxFeeBurnedSun BigInt?      @map("trx_fee_burned_sun")
+  txId            String?      @unique @map("tx_id") @db.Char(64)
+  expiration      DateTime?
+  unsignedRaw     Json?        @map("unsigned_raw")
+  signedRaw       Json?        @map("signed_raw")
+  attempt         Int          @default(0)
+  lastError       String?      @map("last_error")
+  createdBy       String       @map("created_by")
+  broadcastAt     DateTime?    @map("broadcast_at")
+  confirmedAt     DateTime?    @map("confirmed_at")
+  createdAt       DateTime     @default(now()) @map("created_at")
+  updatedAt       DateTime     @updatedAt @map("updated_at")
+  resourceOps     ResourceOperation[]
+
+  @@index([status])
+  @@index([createdAt])
+  @@map("payouts")
+}
+
+model CollectorWallet {
+  id         BigInt   @id @default(autoincrement())
+  network    Network
+  address    String   @db.VarChar(34)
+  addressHex String   @map("address_hex") @db.Char(42)
+  role       String   @default("collector")
+  isActive   Boolean  @default(true) @map("is_active")
+  configHash String   @map("config_hash")
+  verifiedAt DateTime? @map("verified_at")
+  createdBy  String?  @map("created_by")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@unique([network, address])
+  @@map("collector_wallets")
+}
+
+model AuditLog {
+  id          BigInt   @id @default(autoincrement())
+  actor       String
+  role        String?
+  action      String
+  subjectType String?  @map("subject_type")
+  subjectId   String?  @map("subject_id")
+  details     Json?
+  ip          String?
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@index([createdAt])
+  @@map("audit_log")
+}
+
+model SignerRequest {
+  id              BigInt   @id @default(autoincrement())
+  kind            String
+  derivationIndex Int?     @map("derivation_index")
+  unsignedHash    String   @unique @map("unsigned_hash")
+  sweepId         BigInt?  @map("sweep_id")
+  result          String?
+  error           String?
+  requestedAt     DateTime @default(now()) @map("requested_at")
+
+  @@map("signer_requests")
+}
+
+enum AdminRole {
+  viewer
+  operator
+  admin
+}
+
+/// Admin UI accounts created by the first-run setup page (password hash + TOTP secret). Env credentials still work.
+model AdminAccount {
+  id           BigInt    @id @default(autoincrement())
+  username     String    @unique
+  passwordHash String    @map("password_hash")
+  totpSecret   String    @map("totp_secret")
+  role         AdminRole @default(admin)
+  disabled     Boolean   @default(false)
+  createdAt    DateTime  @default(now()) @map("created_at")
+  lastLoginAt  DateTime? @map("last_login_at")
+
+  @@map("admin_accounts")
+}
+
+model Setting {
+  key       String   @id
+  value     Json
+  updatedBy String?  @map("updated_by")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("settings")
+}

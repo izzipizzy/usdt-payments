@@ -1,0 +1,21 @@
+# OrbStack ingress for apps started on the host with pnpm.
+# Build the admin first, then: docker compose -f docker-compose.local.yml up -d admin
+# Do not run this admin and the full-stack admin at the same time.
+services:
+  admin:
+    image: nginx:alpine
+    labels:
+      dev.orbstack.domains: usdt.local
+    ports:
+      - "127.0.0.1:${ADMIN_PORT:-8080}:80"
+    environment:
+      CORE_PORT: ${PORT:-3000}
+    volumes:
+      - ./apps/admin/dist:/usr/share/nginx/html:ro
+      - ./apps/admin/nginx.conf:/etc/nginx/source/default.conf:ro
+    command:
+      - /bin/sh
+      - -ec
+      - |
+        sed "s#http://core:3000#http://host.docker.internal:$${CORE_PORT}#g" /etc/nginx/source/default.conf > /etc/nginx/conf.d/default.conf
+        exec nginx -g 'daemon off;'

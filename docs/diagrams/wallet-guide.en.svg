@@ -1,0 +1,18 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1120 230' role='img' aria-label='Three types of addresses: what goes where'>
+<rect width='1120' height='230' fill='#ffffff'/>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='context-stroke'/></marker></defs>
+<text x='24' y='30' font-size='16' font-weight='700' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Three types of addresses: what goes where</text>
+<rect x='24' y='65' width='336' height='115' rx='12' fill='#ffffff' stroke='#0f7a6e' stroke-width='2'/>
+<text x='192' y='97' text-anchor='middle' font-size='18' font-weight='700' fill='#0f7a6e' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Receiving addresses</text>
+<text x='192' y='127' text-anchor='middle' font-size='15' font-weight='400' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Senders transfer USDT here</text>
+<text x='192' y='155' text-anchor='middle' font-size='13' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Create one per client / invoice</text>
+<rect x='392' y='65' width='336' height='115' rx='12' fill='#ffffff' stroke='#0f7a6e' stroke-width='2'/>
+<text x='560' y='97' text-anchor='middle' font-size='18' font-weight='700' fill='#0f7a6e' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Main wallet</text>
+<text x='560' y='127' text-anchor='middle' font-size='15' font-weight='400' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Collected USDT is held here</text>
+<text x='560' y='155' text-anchor='middle' font-size='13' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>The service sends payouts from here</text>
+<rect x='760' y='65' width='336' height='115' rx='12' fill='#ffffff' stroke='#b7791f' stroke-width='2'/>
+<text x='928' y='97' text-anchor='middle' font-size='18' font-weight='700' fill='#b7791f' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Pool — the second wallet</text>
+<text x='928' y='127' text-anchor='middle' font-size='15' font-weight='400' fill='#1f2933' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>You fund this wallet with TRX</text>
+<text x='928' y='155' text-anchor='middle' font-size='13' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>Activations and network expenses</text>
+<text x='24' y='212' text-anchor='start' font-size='14' font-weight='400' fill='#52606d' font-family='-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'>itrx.io: configured automatic top-up sends rental TRX from the pool.</text>
+</svg>

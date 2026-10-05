@@ -1,0 +1,770 @@
+{
+  "pages": {
+    "login": {
+      "title": "Вход в аккаунт",
+      "signin": "Войти",
+      "signup": "Зарегистрироваться",
+      "divider": "или",
+      "username": "Имя пользователя",
+      "password": "Пароль",
+      "remember": "Запомнить меня",
+      "forgotPassword": "Забыли пароль?",
+      "noAccount": "Нет аккаунта?",
+      "register": "Зарегистрироваться",
+      "fields": {
+        "email": "Email",
+        "password": "Пароль"
+      },
+      "errors": {
+        "validEmail": "Некорректный email",
+        "requiredEmail": "Укажите email",
+        "requiredPassword": "Укажите пароль"
+      },
+      "buttons": {
+        "submit": "Войти",
+        "forgotPassword": "Забыли пароль?",
+        "noAccount": "Нет аккаунта?",
+        "haveAccount": "Уже есть аккаунт?",
+        "rememberMe": "Запомнить меня"
+      }
+    },
+    "forgotPassword": {
+      "title": "Забыли пароль?",
+      "signin": "Войти",
+      "fields": {
+        "email": "Email"
+      },
+      "errors": {
+        "validEmail": "Некорректный email",
+        "requiredEmail": "Укажите email"
+      },
+      "buttons": {
+        "submit": "Отправить инструкции",
+        "haveAccount": "Уже есть аккаунт?"
+      }
+    },
+    "register": {
+      "title": "Регистрация аккаунта",
+      "signin": "Войти",
+      "divider": "или",
+      "email": "Email",
+      "fields": {
+        "email": "Email",
+        "password": "Пароль"
+      },
+      "errors": {
+        "validEmail": "Некорректный email",
+        "requiredEmail": "Укажите email",
+        "requiredPassword": "Укажите пароль"
+      },
+      "buttons": {
+        "submit": "Зарегистрироваться",
+        "haveAccount": "Уже есть аккаунт?"
+      }
+    },
+    "updatePassword": {
+      "title": "Смена пароля",
+      "fields": {
+        "password": "Новый пароль",
+        "confirmPassword": "Повторите новый пароль"
+      },
+      "errors": {
+        "confirmPasswordNotMatch": "Пароли не совпадают",
+        "requiredPassword": "Укажите пароль",
+        "requiredConfirmPassword": "Повторите пароль"
+      },
+      "buttons": {
+        "submit": "Обновить"
+      }
+    },
+    "error": {
+      "info": "Возможно, вы забыли добавить компонент {{action}} для ресурса {{resource}}.",
+      "404": "Извините, такой страницы не существует.",
+      "resource404": "Убедитесь, что ресурс {{resource}} создан.",
+      "backHome": "На главную"
+    }
+  },
+  "actions": {
+    "list": "Список",
+    "create": "Создать",
+    "edit": "Изменить",
+    "show": "Просмотр"
+  },
+  "buttons": {
+    "create": "Создать",
+    "save": "Сохранить",
+    "logout": "Выйти",
+    "delete": "Удалить",
+    "edit": "Изменить",
+    "cancel": "Отмена",
+    "confirm": "Вы уверены?",
+    "filter": "Фильтр",
+    "clear": "Очистить",
+    "refresh": "Обновить",
+    "show": "Просмотр",
+    "undo": "Отменить",
+    "import": "Импорт",
+    "clone": "Клонировать",
+    "notAccessTitle": "У вас нет прав доступа"
+  },
+  "warnWhenUnsavedChanges": "Уйти со страницы? Есть несохранённые изменения.",
+  "notifications": {
+    "success": "Успешно",
+    "error": "Ошибка (код: {{statusCode}})",
+    "undoable": "У вас есть {{seconds}} с, чтобы отменить",
+    "createSuccess": "{{resource}}: запись создана",
+    "createError": "{{resource}}: ошибка при создании (код: {{statusCode}})",
+    "deleteSuccess": "{{resource}}: запись удалена",
+    "deleteError": "{{resource}}: ошибка при удалении (код: {{statusCode}})",
+    "editSuccess": "{{resource}}: запись изменена",
+    "editError": "{{resource}}: ошибка при изменении (код: {{statusCode}})",
+    "importProgress": "Импорт: {{processed}}/{{total}}"
+  },
+  "loading": "Загрузка",
+  "tags": {
+    "clone": "Клон"
+  },
+  "table": {
+    "actions": "Действия"
+  },
+  "autoSave": {
+    "success": "сохранено",
+    "error": "ошибка автосохранения",
+    "loading": "сохранение...",
+    "idle": "ожидание изменений"
+  },
+  "documentTitle": {
+    "default": "USDT Gateway Admin",
+    "suffix": " | USDT Gateway Admin"
+  },
+  "wallet": {
+    "wallet": "Кошелёк",
+    "titles": {
+      "list": "Кошелёк"
+    }
+  },
+  "advanced": {
+    "advanced": "Дополнительно"
+  },
+  "dashboard": {
+    "dashboard": "Панель",
+    "titles": {
+      "list": "Панель"
+    }
+  },
+  "addresses": {
+    "addresses": "Адреса",
+    "titles": {
+      "list": "Адреса",
+      "show": "Адрес"
+    }
+  },
+  "deposits": {
+    "deposits": "Депозиты",
+    "titles": {
+      "list": "Депозиты"
+    }
+  },
+  "sweeps": {
+    "sweeps": "Сборы",
+    "titles": {
+      "list": "Сборы",
+      "show": "Сбор"
+    }
+  },
+  "payouts": {
+    "payouts": "Выплаты",
+    "titles": {
+      "list": "Выплаты",
+      "show": "Выплата"
+    }
+  },
+  "resources": {
+    "resources": "Ресурсы",
+    "titles": {
+      "list": "Операции с ресурсами"
+    }
+  },
+  "pool": {
+    "pool": "Пул Energy",
+    "titles": {
+      "list": "Пул Energy"
+    }
+  },
+  "settings": {
+    "settings": "Настройки",
+    "titles": {
+      "list": "Настройки"
+    }
+  },
+  "audit": {
+    "audit": "Журнал аудита",
+    "titles": {
+      "list": "Журнал аудита"
+    }
+  },
+  "common": {
+    "confirm": "Подтвердить",
+    "cancel": "Отмена",
+    "done": "Готово",
+    "actionFailed": "Действие не выполнено",
+    "networkError": "Ошибка сети",
+    "refresh": "Обновить",
+    "filter": "Фильтр",
+    "reset": "Сбросить",
+    "save": "Сохранить",
+    "create": "Создать",
+    "open": "Открыть",
+    "none": "(нет)",
+    "raw": "raw",
+    "actions": "Действия",
+    "actionsMenu": "Действия ▾",
+    "nothingToExport": "Нечего экспортировать",
+    "exportCsvPage": "Экспорт CSV (страница)",
+    "copy": "Копировать",
+    "copied": "Скопировано",
+    "openInExplorer": "Открыть в обозревателе",
+    "loadFailed": "Не удалось загрузить",
+    "unknown": "неизвестно",
+    "decimal": "десятичное число",
+    "integer": "целое число",
+    "required": "Обязательное поле"
+  },
+  "header": {
+    "logout": "Выйти",
+    "language": "Язык"
+  },
+  "role": {
+    "viewer": "наблюдатель",
+    "operator": "оператор",
+    "admin": "администратор"
+  },
+  "auth": {
+    "loginFailed": "Ошибка входа",
+    "passwordRequired": "Введите пароль",
+    "invalidPassword": "Неверный пароль или код",
+    "passwordRejected": "Пароль отклонён",
+    "cannotReachApi": "API недоступен",
+    "unauthorized": "Нет доступа",
+    "sessionExpired": "Сессия истекла, войдите снова",
+    "adminRequired": "Требуется роль администратора",
+    "operatorRequired": "Требуется роль оператора",
+    "deleteNotSupported": "Удаление не поддерживается admin API",
+    "codeRequired": "Введите 6-значный код из приложения-аутентификатора",
+    "stepUpTitle": "Подтвердите кодом из аутентификатора",
+    "stepUpHint": "Действие двигает средства или меняет настройки безопасности. Введите текущий 6-значный код.",
+    "stepUpCode": "6-значный код",
+    "stepUpRequired": "Нужен свежий код из аутентификатора",
+    "logoutNotRevoked": "Выход выполнен только локально",
+    "logoutNotRevokedHint": "Сервер недоступен, сессия не отозвана; она истечёт сама."
+  },
+  "login": {
+    "intro": "Пароль плюс 6-значный код из приложения-аутентификатора.",
+    "passwordLabel": "Пароль",
+    "passwordPlaceholder": "пароль",
+    "passwordRequired": "Введите пароль",
+    "signIn": "Войти",
+    "codeLabel": "Код аутентификатора",
+    "codePlaceholder": "123456"
+  },
+  "status": {
+    "sweep": {
+      "planned": "запланирован",
+      "activating": "активация",
+      "energy_pending": "ожидание energy",
+      "ready": "готов",
+      "signing": "подписание",
+      "broadcast": "отправлен",
+      "confirmed": "подтверждён",
+      "failed": "ошибка",
+      "abandoned": "отменён",
+      "superseded": "заменён"
+    },
+    "payout": {
+      "planned": "запланирована",
+      "energy_pending": "ожидание energy",
+      "ready": "готова",
+      "signing": "подписание",
+      "broadcast": "отправлена",
+      "confirmed": "подтверждена",
+      "failed": "ошибка",
+      "cancelled": "отменена"
+    },
+    "deposit": {
+      "confirmed": "подтверждён",
+      "credited": "зачислен",
+      "sweeping": "собирается",
+      "swept": "собран",
+      "rejected": "отклонён"
+    },
+    "address": {
+      "available": "свободен",
+      "assigned": "назначен",
+      "suspended": "приостановлен",
+      "retired": "выведен"
+    },
+    "onchain": {
+      "inactive": "не активирован",
+      "activated": "активирован"
+    },
+    "resource": {
+      "requested": "запрошено",
+      "delivered": "получено",
+      "failed": "ошибка",
+      "reclaimed": "возвращено",
+      "expired": "истекло"
+    }
+  },
+  "enum": {
+    "energySource": {
+      "rental": "аренда",
+      "own_pool": "свой пул",
+      "burn": "сжигание TRX",
+      "none": "нет"
+    },
+    "resourceKind": {
+      "rent_energy": "аренда energy",
+      "delegate_energy": "делегирование energy",
+      "undelegate_energy": "отзыв energy",
+      "activate": "активация",
+      "send_trx": "отправка TRX",
+      "rent_bandwidth": "аренда bandwidth"
+    },
+    "resourceType": {
+      "ENERGY": "Energy",
+      "BANDWIDTH": "Bandwidth"
+    },
+    "health": {
+      "healthy": "работает",
+      "unhealthy": "не работает"
+    }
+  },
+  "fields": {
+    "id": "Id",
+    "tx": "Транзакция",
+    "stage": "Шаг",
+    "viaAddress": "Временный адрес",
+    "hop1Tx": "Транзакция шаг 1 (основной → временный)",
+    "hop2Tx": "Транзакция шаг 2 (временный → получатель)",
+    "from": "Откуда",
+    "to": "Куда",
+    "amount": "Сумма",
+    "status": "Статус",
+    "block": "Блок",
+    "confirmed": "Подтверждён",
+    "credited": "Зачислен",
+    "swept": "Собран",
+    "sweep": "Сбор",
+    "alias": "Алиас",
+    "address": "Адрес",
+    "energy": "Energy",
+    "energySource": "Источник energy",
+    "energySrc": "Ист. energy",
+    "energyEstUsed": "Energy оценка / факт",
+    "cost": "Стоимость (TRX)",
+    "attempt": "Попытка",
+    "attemptShort": "№",
+    "error": "Ошибка",
+    "lastError": "Последняя ошибка",
+    "created": "Создан",
+    "updated": "Обновлён",
+    "broadcast": "Отправлен",
+    "bandwidth": "Bandwidth",
+    "provider": "Провайдер",
+    "kind": "Тип",
+    "target": "Получатель",
+    "order": "Заказ",
+    "expires": "Истекает",
+    "onchain": "В сети",
+    "usdtBalance": "Баланс USDT",
+    "lastDeposit": "Последний депозит",
+    "actions": "Действия",
+    "when": "Когда",
+    "actor": "Кто",
+    "action": "Действие",
+    "subject": "Объект",
+    "details": "Детали",
+    "ip": "IP",
+    "queue": "Очередь",
+    "waiting": "В ожидании",
+    "active": "Активные",
+    "delayed": "Отложенные",
+    "failed": "С ошибкой",
+    "health": "Состояние",
+    "balanceTrx": "Баланс (TRX)",
+    "detail": "Детали",
+    "hex": "Hex",
+    "derivationIndex": "Индекс деривации",
+    "balanceChecked": "Баланс проверен",
+    "externalId": "Ваш референс",
+    "note": "Комментарий",
+    "createdBy": "Создал",
+    "energyUsed": "Использовано energy"
+  },
+  "page": {
+    "wallet": {
+      "title": "Кошелёк",
+      "notInitializedTitle": "Кошелёк ещё не настроен",
+      "notInitializedIntro": "Создайте новый кошелёк или импортируйте существующую фразу восстановления. Адреса для депозитов будут создаваться из неё.",
+      "createTitle": "Создать новый кошелёк",
+      "createIntro": "Будет сгенерирована новая фраза восстановления. Она показывается только один раз — сразу после создания.",
+      "wordsLabel": "Длина фразы",
+      "wordsOption": "{{n}} слов",
+      "createButton": "Создать новый кошелёк",
+      "phraseTitle": "Ваша фраза восстановления",
+      "phraseWarningTitle": "Запишите эти слова прямо сейчас — они показываются только один раз",
+      "phraseWarning": "Фраза нигде не хранится в открытом виде, и показать её повторно невозможно. Любой, у кого она есть, управляет всеми средствами этого кошелька. Храните её офлайн и никому не передавайте.",
+      "copyPhrase": "Скопировать фразу",
+      "copyFailed": "Не удалось скопировать — выделите слова и скопируйте вручную",
+      "firstAddress": "Первый адрес",
+      "savedCheckbox": "Я записал фразу в надёжном месте",
+      "continue": "Продолжить",
+      "importTitle": "Импортировать кошелёк",
+      "importIntro": "Вставьте фразу восстановления из 12 или 24 слов существующего кошелька.",
+      "mnemonicLabel": "Фраза восстановления",
+      "mnemonicPlaceholder": "слово слово слово …",
+      "mnemonicRequired": "Введите фразу восстановления",
+      "mnemonicInvalid": "Неверная фраза восстановления",
+      "importButton": "Импортировать кошелёк",
+      "imported": "Кошелёк импортирован. Первый адрес: {{address}}",
+      "alreadyInitialized": "Кошелёк уже настроен",
+      "mainTitle": "Основной кошелёк",
+      "mainAddress": "Адрес основного кошелька",
+      "mainUsdtBalance": "Баланс USDT",
+      "mainTrxBalance": "Баланс TRX",
+      "mainIntro": "Сюда приходят собранные USDT клиентов, отсюда уходят выплаты. TRX здесь не нужны. Выплаты идут через одноразовый адрес, получатель этот кошелёк не видит.",
+      "mainNotActivated": "Адрес ещё не активен в сети — он станет активным после первого поступления.",
+      "collectorExternal": "Сборы уходят на внешний холодный адрес <addr/> ({{collectorUsdt}} USDT)",
+      "makePayout": "Сделать выплату",
+      "allPayouts": "Все выплаты",
+      "addressesTitle": "Адреса клиентов",
+      "network": "Сеть",
+      "xpub": "Публичный ключ (xpub)",
+      "addressesIssued": "Выдано адресов",
+      "createAddress": "Создать адрес",
+      "allAddresses": "Все адреса",
+      "newAddressTitle": "Новый адрес для депозита",
+      "sendHint": "Отправьте USDT (TRC‑20) на этот адрес",
+      "poolTitle": "Пул (TRX для комиссий)",
+      "poolAddress": "Адрес пула",
+      "poolTrxBalance": "Баланс TRX",
+      "poolEnergyAvailable": "Доступно Energy",
+      "poolIntro": "Отсюда система платит за активацию адресов и Energy. Пополните этот адрес TRX — рекомендуем не меньше {{minTrx}} TRX. USDT сюда отправлять не нужно.",
+      "poolLowBalance": "Мало TRX в пуле",
+      "poolLowBalanceHint": "Ниже {{minTrx}} TRX активация адресов и покупка Energy могут начать сбоить. Пополните пул TRX.",
+      "poolNotActivated": "Адрес ещё не активен в сети — он станет активным после первого поступления TRX.",
+      "poolStaking": "Стейк и Energy"
+    },
+    "dashboard": {
+      "title": "Панель",
+      "updatedAuto": "обновлено {{time}} · автообновление {{seconds}} с",
+      "loadFailed": "Не удалось загрузить панель",
+      "recalc": "Пересчитать балансы",
+      "recalcContent": "Заново прочитать balanceOf() из сети для всех назначенных адресов. Выполняется асинхронно в фоне.",
+      "recalcDone": "Поставлено в очередь задач обновления баланса: {{n}}",
+      "sweepAll": "Собрать всё выше порога",
+      "sweepAllContent": "Запланировать сбор для каждого адреса, чей баланс USDT не ниже настроенного минимума. Energy будет арендована/использована согласно настройкам.",
+      "sweepAllDone": "Запланировано сборов: {{n}}",
+      "collector": "Коллектор",
+      "depositAddresses": "Депозитные адреса",
+      "usdtOnAddresses": "USDT на адресах",
+      "total": "Всего",
+      "assigned": "Назначено",
+      "withBalance": "С балансом",
+      "watcher": "Наблюдатель",
+      "lagBlocks": "Отставание (блоков)",
+      "solidBlock": "Solid-блок",
+      "cursor": "Курсор",
+      "updated": "обновлено",
+      "lagWarn": "Наблюдатель отстаёт на {{lag}} блоков (> {{max}})",
+      "sweeps24h": "Сборы за 24 ч",
+      "costTrx": "Стоимость (TRX)",
+      "count": "Всего",
+      "confirmed": "Подтверждено",
+      "failed": "С ошибкой",
+      "queues": "Очереди",
+      "energyProviders": "Провайдеры energy",
+      "chainParams": "Параметры сети",
+      "energyFee": "Цена energy (SUN)",
+      "bandwidthFee": "Цена bandwidth (SUN)",
+      "createAccountFee": "Комиссия за создание аккаунта (SUN)",
+      "poolTitle": "Пул Energy",
+      "poolEnergyAvailable": "Доступно energy",
+      "poolTrxBalance": "Баланс TRX",
+      "poolOpen": "Открыть страницу пула"
+    },
+    "addresses": {
+      "title": "Адреса",
+      "searchPlaceholder": "алиас / адрес",
+      "statusPlaceholder": "статус",
+      "withBalance": "с балансом",
+      "unsweptOlderThan": "не собран дольше (ч)",
+      "hoursPlaceholder": "часов",
+      "createAddress": "Создать адрес",
+      "createTitle": "Создание адреса",
+      "create": "Создать",
+      "aliasLabel": "Алиас",
+      "aliasPattern": "только буквы, цифры, . _ : -",
+      "aliasExtra": "Идемпотентно: для существующего алиаса вернётся его текущий адрес.",
+      "aliasPlaceholder": "client-123",
+      "metadataLabel": "Метаданные (JSON-объект, необязательно)",
+      "metadataMustBeObject": "метаданные должны быть JSON-объектом",
+      "created": "Адрес {{address}} для алиаса {{alias}}",
+      "sweepNow": "Собрать сейчас",
+      "sweepConfirmTitle": "Собрать {{name}}?",
+      "sweepConfirmContent": "Принудительно собрать {{amount}} USDT без учёта порогов.",
+      "sweepPlanned": "Сбор {{id}} запланирован",
+      "resume": "Возобновить",
+      "suspend": "Приостановить",
+      "resumeConfirm": "Возобновить {{name}}?",
+      "suspendConfirm": "Приостановить {{name}}?",
+      "resumed": "Адрес возобновлён",
+      "suspended": "Адрес приостановлен",
+      "refreshBalance": "Обновить баланс",
+      "balanceRefreshed": "Баланс обновлён из сети",
+      "checkedAt": "проверено {{time}}",
+      "neverChecked": "ещё не проверялся",
+      "showTitle": "Адрес {{name}}",
+      "showTitleShort": "Адрес",
+      "deposits": "Депозиты ({{n}})",
+      "sweeps": "Сборы ({{n}})"
+    },
+    "deposits": {
+      "title": "Депозиты",
+      "statusPlaceholder": "статус",
+      "aliasPlaceholder": "алиас",
+      "txIdPlaceholder": "id транзакции",
+      "sweepLink": "сбор {{id}}"
+    },
+    "sweeps": {
+      "title": "Сборы",
+      "statusPlaceholder": "статус",
+      "aliasPlaceholder": "алиас",
+      "showTitle": "Сбор {{id}}",
+      "showTitleShort": "Сбор",
+      "retry": "Повторить",
+      "retryConfirm": "Повторить сбор {{id}}?",
+      "requeued": "Сбор поставлен в очередь повторно",
+      "cancel": "Отменить",
+      "cancelConfirm": "Отменить сбор {{id}}?",
+      "cancelContent": "Сбор будет отменён, арендованная energy возвращена.",
+      "cancelOk": "Отменить сбор",
+      "cancelled": "Сбор отменён",
+      "rebuild": "Пересоздать",
+      "rebuildConfirm": "Пересоздать сбор {{id}}?",
+      "rebuildContent": "Будет создан новый сбор; этот получит статус «заменён».",
+      "rebuilt": "Создан новый сбор {{id}}",
+      "lastError": "Последняя ошибка",
+      "toCollector": "Куда (коллектор)",
+      "bandwidthUsed": "Использовано bandwidth",
+      "resourceCost": "Стоимость ресурсов (TRX)",
+      "trxBurned": "Сожжено TRX",
+      "totalCost": "Итого (TRX)",
+      "findInAddresses": "найти в адресах",
+      "resourceOps": "Операции с ресурсами ({{n}})",
+      "deposits": "Депозиты ({{n}})"
+    },
+    "payouts": {
+      "title": "Выплаты",
+      "statusPlaceholder": "статус",
+      "toPlaceholder": "адрес получателя",
+      "newPayout": "Новая выплата",
+      "createTitle": "Новая выплата",
+      "toLabel": "Адрес получателя",
+      "toExtra": "TRON-адрес (TRC-20): начинается с T, 34 символа.",
+      "toInvalid": "Неверный TRON-адрес: должен начинаться с T и содержать 34 символа",
+      "amountLabel": "Сумма (USDT)",
+      "amountInvalid": "Десятичное число, не более 6 знаков после точки",
+      "amountPositive": "Сумма должна быть больше 0",
+      "externalIdLabel": "Ваш референс",
+      "externalIdExtra": "Уникальный id выплаты на вашей стороне. Повторная отправка с тем же референсом вернёт ту же выплату, а не создаст вторую.",
+      "noteLabel": "Комментарий",
+      "notePlaceholder": "необязательно",
+      "submit": "Отправить",
+      "rejected": "Выплата отклонена",
+      "walletNotReady": "Кошелёк выплат не настроен: {{message}}",
+      "created": "Выплата {{amount}} USDT создана ({{id}})",
+      "alreadyExists": "Выплата с референсом {{id}} уже существует — показана она",
+      "retry": "Повторить",
+      "retryConfirm": "Повторить выплату {{id}}?",
+      "requeued": "Выплата поставлена в очередь повторно",
+      "cancel": "Отменить",
+      "cancelConfirm": "Отменить выплату {{id}}?",
+      "cancelContent": "Выплата будет отменена, арендованная energy возвращена. После отправки шага 1 в сеть отмена невозможна.",
+      "cancelOk": "Отменить выплату",
+      "cancelled": "Выплата отменена",
+      "showTitle": "Выплата {{id}}",
+      "showTitleShort": "Выплата",
+      "lastError": "Последняя ошибка",
+      "resourceCost": "Стоимость ресурсов (TRX)",
+      "resourceOps": "Операции с ресурсами ({{n}})",
+      "twoHopInfo": "Выплата проходит в два шага через одноразовый адрес: получатель не видит основной кошелёк.",
+      "stageValue": "{{stage}}/2",
+      "hop1Short": "шаг 1",
+      "hop2Short": "шаг 2"
+    },
+    "resources": {
+      "title": "Операции с ресурсами",
+      "kindPlaceholder": "тип",
+      "statusPlaceholder": "статус",
+      "providerPlaceholder": "провайдер",
+      "sweepIdPlaceholder": "id сбора"
+    },
+    "settings": {
+      "title": "Настройки",
+      "noChanges": "Нет изменений",
+      "saved": "Сохранено: {{fields}}",
+      "saveFailed": "Не удалось сохранить",
+      "readOnly": "Только чтение: ваша роль — {{role}}; для изменения настроек нужна роль администратора.",
+      "disabledSuffix": "(отключён)",
+      "sweepPolicy": "Политика сбора",
+      "sweepMin": "Мин. сумма сбора (USDT)",
+      "sweepMinExtra": "Адреса с балансом не ниже этого значения собираются автоматически.",
+      "sweepMaxAge": "Макс. возраст до сбора (ч)",
+      "sweepMaxAgeExtra": "Меньшие балансы собираются, когда они старше этого срока.",
+      "sweepMaxPerHour": "Сборов в час (0 = без ограничений)",
+      "minDeposit": "Мин. депозит (USDT)",
+      "minDepositExtra": "Меньшие переводы записываются как отклонённые (пыль).",
+      "payouts": "Выплаты",
+      "payoutMax": "Макс. выплата (USDT)",
+      "payoutMaxExtra": "Лимит одной выплаты; 0 = без ограничений.",
+      "payoutDailyMax": "Суточный лимит выплат (USDT)",
+      "payoutDailyMaxExtra": "Сумма всех выплат за сутки; 0 = без ограничений.",
+      "energyFees": "Energy и комиссии",
+      "feeLimit": "Лимит комиссии (SUN)",
+      "feeLimitExtra": "fee_limit транзакции перевода TRC-20.",
+      "energyMargin": "Запас energy (1–3)",
+      "energyMarginExtra": "Множитель к оценке energy.",
+      "dailyBudget": "Дневной бюджет energy (SUN)",
+      "providerOrder": "Порядок провайдеров",
+      "providerOrderExtra": "Провайдеры energy опрашиваются в этом порядке.",
+      "providerOrderPlaceholder": "например itrx, own_pool",
+      "burnEnabled": "Разрешить сжигание TRX как запасной вариант",
+      "leaveDust": "Оставлять пыль на адресе",
+      "save": "Сохранить",
+      "reset": "Сбросить",
+      "itrxTitle": "Аренда Energy — itrx.io",
+      "itrxIntro": "Аренда оплачивается с баланса вашего аккаунта на itrx.io. Ключи выдаются в личном кабинете <link>https://itrx.io</link> (раздел API). Работает только в mainnet.",
+      "itrxApiKey": "API key",
+      "itrxApiSecret": "API secret",
+      "itrxApiSecretExtra": "Хранится без показа; оставьте пустым, чтобы не менять.",
+      "itrxSecretSetPlaceholder": "сохранён, введите новый чтобы заменить",
+      "itrxSecretUnsetPlaceholder": "не задан",
+      "itrxRentPeriod": "Период аренды",
+      "itrxRentPeriodExtra": "На сколько выдаётся арендованная energy.",
+      "itrxRentPeriod1H": "1 час (1H)",
+      "itrxRentPeriod1D": "1 день (1D)",
+      "itrxFirst": "Использовать itrx.io первым",
+      "itrxFirstExtra": "Ставит itrx в начало порядка провайдеров ниже; если снять — убирает его.",
+      "itrxTest": "Проверить подключение",
+      "itrxTestExtra": "Проверяет сохранённые ключи на itrx.io (после правок сначала сохраните).",
+      "itrxTestOk": "Подключение к itrx.io работает",
+      "itrxTestFailed": "Подключение к itrx.io не удалось",
+      "itrxUnitPrice": "Цена за единицу energy: {{sun}} SUN",
+      "itrxTransferCost": "Стоимость одного перевода USDT: {{trx}} TRX",
+      "itrxBalance": "Баланс itrx.io: {{trx}} TRX"
+    },
+    "audit": {
+      "title": "Журнал аудита"
+    },
+    "pool": {
+      "title": "Пул Energy",
+      "loadFailed": "Не удалось загрузить данные пула",
+      "notConfigured": "Пул Energy не настроен",
+      "notConfiguredHint": "Настройте кошелёк пула в Core, чтобы включить стейкинг.",
+      "address": "Адрес пула",
+      "trxBalance": "Баланс TRX",
+      "trxBalanceSun": "{{sun}} SUN",
+      "energy": "Energy",
+      "energyUsedOf": "использовано {{used}} / {{limit}}",
+      "energyAvailable": "Доступно energy",
+      "energyLimit": "Лимит energy",
+      "energyUsed": "Использовано energy",
+      "bandwidthAvailable": "Доступно bandwidth",
+      "stakedEnergy": "В стейке под energy (TRX)",
+      "stakedBandwidth": "В стейке под bandwidth (TRX)",
+      "delegatedOut": "Делегировано, energy (TRX)",
+      "energyPerTrx": "Energy на 1 TRX в день",
+      "sweepsPerDay": "Оценка сборов в день",
+      "helper": "≈ {{perTrx}} energy на 1 TRX в стейке в день; один перевод USDT требует ~65 000",
+      "stake": "Застейкать",
+      "unstake": "Вывести из стейка",
+      "stakeTitle": "Стейкинг TRX",
+      "unstakeTitle": "Вывод TRX из стейка",
+      "amount": "Сумма (TRX)",
+      "resource": "Ресурс",
+      "amountRequired": "Укажите сумму",
+      "amountPositive": "Сумма должна быть больше 0",
+      "stakeConfirmTitle": "Застейкать {{amount}} TRX под {{resource}}?",
+      "stakeConfirmContent": "Кошелёк пула заморозит {{amount}} TRX (FreezeBalanceV2) для получения {{resource}}.",
+      "unstakeConfirmTitle": "Вывести {{amount}} TRX из стейка {{resource}}?",
+      "unstakeConfirmContent": "Кошелёк пула разморозит {{amount}} TRX (UnfreezeBalanceV2). TRX вернутся после периода анстейкинга сети — около 14 дней.",
+      "stakeDone": "Транзакция стейкинга отправлена",
+      "unstakeDone": "Транзакция вывода из стейка отправлена",
+      "txLabel": "Транзакция",
+      "operatorOnly": "Требуется роль оператора",
+      "unstakeNote": "Выведенные из стейка TRX станут доступны примерно через 14 дней."
+    },
+    "backup": {
+      "title": "Экспорт ярлыков и восстановление из сети",
+      "intro": "Полный бэкап сервера создаётся командой scripts/backup.sh, восстановление — scripts/restore.sh (см. README). Здесь можно отдельно сохранить имена адресов и заметки к выплатам. Восстановление из сети — аварийный вариант, оно не возвращает настройки и полную историю.",
+      "downloadJson": "Скачать ярлыки (JSON)",
+      "downloadCsv": "Скачать ярлыки (CSV)",
+      "restore": "Восстановить ярлыки из JSON",
+      "restored": "Ярлыков применено: {{applied}}, пропущено: {{skipped}}",
+      "scan": "Восстановить из сети",
+      "scanConfirmTitle": "Пересобрать из блокчейна?",
+      "scanConfirmContent": "Выводит адреса из фразы, запрашивает у TronGrid их историю USDT, воссоздаёт адреса, депозиты и сборы и возвращает USDT, застрявшие на одноразовых адресах выплат, на основной кошелёк. Можно запускать повторно.",
+      "scanQueued": "Восстановление запущено",
+      "state": {
+        "running": "Идёт восстановление: {{phase}}",
+        "done": "Восстановление завершено",
+        "failed": "Восстановление не удалось"
+      },
+      "summary": "Адресов проверено {{addressesScanned}}, восстановлено {{addressesRecovered}}; депозитов {{depositsIngested}}; сборов {{sweepsRecovered}}; hop-адресов проверено {{hopsScanned}}, возвращено {{hopsRecovered}}."
+    }
+  },
+  "setup": {
+    "title": "Первый запуск",
+    "stepAccount": "Администратор",
+    "stepTotp": "Аутентификатор",
+    "stepDone": "Готово",
+    "introAccount": "Администратора ещё нет. Создайте первый аккаунт: setup-токен подтверждает, что сервер ваш.",
+    "tokenLabel": "Setup-токен",
+    "usernameLabel": "Логин",
+    "usernameRule": "2–64 символа: буквы, цифры, . _ @ -",
+    "passwordLabel": "Пароль",
+    "passwordHint": "Минимум 12 символов. Используется вместе с кодом из аутентификатора.",
+    "passwordRule": "Минимум 12 символов",
+    "confirmLabel": "Повторите пароль",
+    "passwordMismatch": "Пароли не совпадают",
+    "next": "Продолжить",
+    "introTotp": "Отсканируйте QR-код в Google Authenticator, Aegis, 1Password или любом TOTP-приложении и введите 6-значный код.",
+    "manualKey": "Или введите ключ вручную:",
+    "finish": "Создать аккаунт и войти",
+    "done": "Администратор создан. Входим…",
+    "tokenHintEnv": "Значение SETUP_TOKEN из вашего .env (вы сами его придумали; используется один раз).",
+    "tokenMissingTitle": "SETUP_TOKEN не задан",
+    "tokenMissingText": "Добавьте в .env строку вида (любые 8+ символов), перезапустите core (docker compose --profile full up -d core) и обновите страницу:",
+    "stepNetwork": "Сеть",
+    "networkLabel": "Сеть Tron",
+    "networkMainnet": "MAINNET — настоящие деньги",
+    "networkNile": "Nile testnet — тестовые монеты",
+    "networkMainnetHint": "Каждый перевод — настоящие USDT/TRX.",
+    "networkNileHint": "Бесплатные монеты с крана; обкатайте процесс здесь перед боевой сетью.",
+    "rpcLabel": "RPC",
+    "rpcOk": "подключено, блок {{block}} ({{ms}} мс)",
+    "rpcFail": "нет связи",
+    "rpcFailTitle": "Core не может подключиться к RPC Tron",
+    "keySet": "ключ TronGrid задан",
+    "keyMissing": "ключа TronGrid нет",
+    "keyTitle": "Ключ TronGrid",
+    "keyText": "Сервис читает блокчейн через TronGrid. Без ключа TronGrid ограничивает запросы по IP: для пробы на Nile хватит, для mainnet нет (watcher опрашивает сеть каждые 3 с). Зарегистрируйтесь на trongrid.io, создайте бесплатный API-ключ, добавьте в .env и перезапустите:",
+    "switchToMainnet": "Переключить на mainnet (настоящие деньги)",
+    "switchToNile": "Переключить на Nile testnet",
+    "switchText": "Сеть читается из .env при старте контейнеров. Впишите эти строки в .env и перезапустите:",
+    "switchRefresh": "Страница перепроверяет состояние каждые 5 секунд и покажет новую сеть, когда core поднимется. Менять сеть можно только на чистой установке (scripts/reset.sh): тестовые и боевые адреса не должны смешиваться.",
+    "continueMainnet": "Продолжить в MAINNET",
+    "continueNile": "Продолжить в Nile testnet"
+  }
+}

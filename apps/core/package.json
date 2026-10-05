@@ -1,0 +1,50 @@
+{
+  "name": "@usdt-trx/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:integration": "INTEGRATION=1 vitest run --config vitest.integration.config.ts",
+    "dev": "tsc -p tsconfig.json && node --enable-source-maps dist/main.js",
+    "dev:watcher": "tsc -p tsconfig.json && node --enable-source-maps dist/watcher.main.js",
+    "start": "node dist/main.js",
+    "start:watcher": "node dist/watcher.main.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "totp:setup": "tsc -p tsconfig.json && node dist/tools/totp-setup.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.0",
+    "@nestjs/core": "^11.1.0",
+    "@nestjs/platform-fastify": "^11.1.0",
+    "@nestjs/schedule": "^6.0.0",
+    "@noble/curves": "^1.9.0",
+    "@noble/hashes": "^1.8.0",
+    "@prisma/client": "^6.12.0",
+    "@scure/bip32": "^1.7.0",
+    "@usdt-trx/shared": "workspace:*",
+    "bullmq": "^5.56.0",
+    "ioredis": "^5.6.0",
+    "prisma": "^6.12.0",
+    "qrcode": "^1.5.4",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^11.1.0",
+    "@swc/core": "^1.16.2",
+    "@types/node": "^22.15.0",
+    "@types/qrcode": "^1.5.6",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.0",
+    "unplugin-swc": "^1.6.0",
+    "vitest": "^3.2.0"
+  }
+}

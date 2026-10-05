@@ -1,0 +1,770 @@
+{
+  "pages": {
+    "login": {
+      "title": "Sign in to your account",
+      "signin": "Sign in",
+      "signup": "Sign up",
+      "divider": "or",
+      "username": "Username",
+      "password": "Password",
+      "remember": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don’t have an account?",
+      "register": "Sign up",
+      "fields": {
+        "email": "Email",
+        "password": "Password"
+      },
+      "errors": {
+        "validEmail": "Invalid email address",
+        "requiredEmail": "Email is required",
+        "requiredPassword": "Password is required"
+      },
+      "buttons": {
+        "submit": "Login",
+        "forgotPassword": "Forgot password?",
+        "noAccount": "Don’t have an account?",
+        "haveAccount": "Have an account?",
+        "rememberMe": "Remember me"
+      }
+    },
+    "forgotPassword": {
+      "title": "Forgot your password?",
+      "signin": "Sign in",
+      "fields": {
+        "email": "Email"
+      },
+      "errors": {
+        "validEmail": "Invalid email address",
+        "requiredEmail": "Email is required"
+      },
+      "buttons": {
+        "submit": "Send reset instructions",
+        "haveAccount": "Have an account?"
+      }
+    },
+    "register": {
+      "title": "Sign up for your account",
+      "signin": "Sign in",
+      "divider": "or",
+      "email": "Email",
+      "fields": {
+        "email": "Email",
+        "password": "Password"
+      },
+      "errors": {
+        "validEmail": "Invalid email address",
+        "requiredEmail": "Email is required",
+        "requiredPassword": "Password is required"
+      },
+      "buttons": {
+        "submit": "Register",
+        "haveAccount": "Have an account?"
+      }
+    },
+    "updatePassword": {
+      "title": "Update password",
+      "fields": {
+        "password": "New password",
+        "confirmPassword": "Confirm new password"
+      },
+      "errors": {
+        "confirmPasswordNotMatch": "Passwords do not match",
+        "requiredPassword": "Password is required",
+        "requiredConfirmPassword": "Confirm password is required"
+      },
+      "buttons": {
+        "submit": "Update"
+      }
+    },
+    "error": {
+      "info": "You may have forgotten to add the {{action}} component to {{resource}} resource.",
+      "404": "Sorry, the page you visited does not exist.",
+      "resource404": "Are you sure you have created the {{resource}} resource.",
+      "backHome": "Back home"
+    }
+  },
+  "actions": {
+    "list": "List",
+    "create": "Create",
+    "edit": "Edit",
+    "show": "Show"
+  },
+  "buttons": {
+    "create": "Create",
+    "save": "Save",
+    "logout": "Logout",
+    "delete": "Delete",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "confirm": "Are you sure?",
+    "filter": "Filter",
+    "clear": "Clear",
+    "refresh": "Refresh",
+    "show": "Show",
+    "undo": "Undo",
+    "import": "Import",
+    "clone": "Clone",
+    "notAccessTitle": "You don't have permission to access"
+  },
+  "warnWhenUnsavedChanges": "Are you sure you want to leave? You have unsaved changes.",
+  "notifications": {
+    "success": "Successful",
+    "error": "Error (status code: {{statusCode}})",
+    "undoable": "You have {{seconds}} seconds to undo",
+    "createSuccess": "Successfully created {{resource}}",
+    "createError": "There was an error creating {{resource}} (status code: {{statusCode}})",
+    "deleteSuccess": "Successfully deleted {{resource}}",
+    "deleteError": "Error when deleting {{resource}} (status code: {{statusCode}})",
+    "editSuccess": "Successfully edited {{resource}}",
+    "editError": "Error when editing {{resource}} (status code: {{statusCode}})",
+    "importProgress": "Importing: {{processed}}/{{total}}"
+  },
+  "loading": "Loading",
+  "tags": {
+    "clone": "Clone"
+  },
+  "table": {
+    "actions": "Actions"
+  },
+  "autoSave": {
+    "success": "saved",
+    "error": "auto save failure",
+    "loading": "saving...",
+    "idle": "waiting for changes"
+  },
+  "documentTitle": {
+    "default": "USDT Gateway Admin",
+    "suffix": " | USDT Gateway Admin"
+  },
+  "wallet": {
+    "wallet": "Wallet",
+    "titles": {
+      "list": "Wallet"
+    }
+  },
+  "advanced": {
+    "advanced": "Advanced"
+  },
+  "dashboard": {
+    "dashboard": "Dashboard",
+    "titles": {
+      "list": "Dashboard"
+    }
+  },
+  "addresses": {
+    "addresses": "Addresses",
+    "titles": {
+      "list": "Addresses",
+      "show": "Address"
+    }
+  },
+  "deposits": {
+    "deposits": "Deposits",
+    "titles": {
+      "list": "Deposits"
+    }
+  },
+  "sweeps": {
+    "sweeps": "Sweeps",
+    "titles": {
+      "list": "Sweeps",
+      "show": "Sweep"
+    }
+  },
+  "payouts": {
+    "payouts": "Payouts",
+    "titles": {
+      "list": "Payouts",
+      "show": "Payout"
+    }
+  },
+  "resources": {
+    "resources": "Resources",
+    "titles": {
+      "list": "Resource operations"
+    }
+  },
+  "pool": {
+    "pool": "Energy pool",
+    "titles": {
+      "list": "Energy pool"
+    }
+  },
+  "settings": {
+    "settings": "Settings",
+    "titles": {
+      "list": "Settings"
+    }
+  },
+  "audit": {
+    "audit": "Audit log",
+    "titles": {
+      "list": "Audit log"
+    }
+  },
+  "common": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "done": "Done",
+    "actionFailed": "Action failed",
+    "networkError": "Network error",
+    "refresh": "Refresh",
+    "filter": "Filter",
+    "reset": "Reset",
+    "save": "Save",
+    "create": "Create",
+    "open": "Open",
+    "none": "(none)",
+    "raw": "raw",
+    "actions": "Actions",
+    "actionsMenu": "Actions ▾",
+    "nothingToExport": "Nothing to export",
+    "exportCsvPage": "Export CSV (page)",
+    "copy": "Copy",
+    "copied": "Copied",
+    "openInExplorer": "Open in explorer",
+    "loadFailed": "Failed to load",
+    "unknown": "unknown",
+    "decimal": "decimal number",
+    "integer": "integer",
+    "required": "Required"
+  },
+  "header": {
+    "logout": "Logout",
+    "language": "Language"
+  },
+  "role": {
+    "viewer": "viewer",
+    "operator": "operator",
+    "admin": "admin"
+  },
+  "auth": {
+    "loginFailed": "Login failed",
+    "passwordRequired": "Enter the password",
+    "invalidPassword": "Wrong password or code",
+    "passwordRejected": "Password rejected",
+    "cannotReachApi": "Cannot reach the API",
+    "unauthorized": "Unauthorized",
+    "sessionExpired": "Session expired, please log in again",
+    "adminRequired": "Admin role required",
+    "operatorRequired": "Operator role required",
+    "deleteNotSupported": "Delete is not supported by the admin API",
+    "codeRequired": "Enter the 6-digit code from your authenticator app",
+    "stepUpTitle": "Confirm with your authenticator",
+    "stepUpHint": "This action moves funds or changes security settings. Enter the current 6-digit code.",
+    "stepUpCode": "6-digit code",
+    "stepUpRequired": "A fresh authenticator code is required",
+    "logoutNotRevoked": "Signed out locally only",
+    "logoutNotRevokedHint": "The server could not be reached to revoke the session; it expires on its own."
+  },
+  "login": {
+    "intro": "Password plus the 6-digit code from your authenticator app.",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "password",
+    "passwordRequired": "Enter the password",
+    "signIn": "Sign in",
+    "codeLabel": "Authenticator code",
+    "codePlaceholder": "123456"
+  },
+  "status": {
+    "sweep": {
+      "planned": "planned",
+      "activating": "activating",
+      "energy_pending": "energy pending",
+      "ready": "ready",
+      "signing": "signing",
+      "broadcast": "broadcast",
+      "confirmed": "confirmed",
+      "failed": "failed",
+      "abandoned": "abandoned",
+      "superseded": "superseded"
+    },
+    "payout": {
+      "planned": "planned",
+      "energy_pending": "energy pending",
+      "ready": "ready",
+      "signing": "signing",
+      "broadcast": "broadcast",
+      "confirmed": "confirmed",
+      "failed": "failed",
+      "cancelled": "cancelled"
+    },
+    "deposit": {
+      "confirmed": "confirmed",
+      "credited": "credited",
+      "sweeping": "sweeping",
+      "swept": "swept",
+      "rejected": "rejected"
+    },
+    "address": {
+      "available": "available",
+      "assigned": "assigned",
+      "suspended": "suspended",
+      "retired": "retired"
+    },
+    "onchain": {
+      "inactive": "inactive",
+      "activated": "activated"
+    },
+    "resource": {
+      "requested": "requested",
+      "delivered": "delivered",
+      "failed": "failed",
+      "reclaimed": "reclaimed",
+      "expired": "expired"
+    }
+  },
+  "enum": {
+    "energySource": {
+      "rental": "rental",
+      "own_pool": "own pool",
+      "burn": "burn",
+      "none": "none"
+    },
+    "resourceKind": {
+      "rent_energy": "rent energy",
+      "delegate_energy": "delegate energy",
+      "undelegate_energy": "undelegate energy",
+      "activate": "activate",
+      "send_trx": "send TRX",
+      "rent_bandwidth": "rent bandwidth"
+    },
+    "resourceType": {
+      "ENERGY": "Energy",
+      "BANDWIDTH": "Bandwidth"
+    },
+    "health": {
+      "healthy": "healthy",
+      "unhealthy": "unhealthy"
+    }
+  },
+  "fields": {
+    "id": "Id",
+    "tx": "Tx",
+    "stage": "Step",
+    "viaAddress": "Hop address",
+    "hop1Tx": "Tx step 1 (main → hop)",
+    "hop2Tx": "Tx step 2 (hop → recipient)",
+    "from": "From",
+    "to": "To",
+    "amount": "Amount",
+    "status": "Status",
+    "block": "Block",
+    "confirmed": "Confirmed",
+    "credited": "Credited",
+    "swept": "Swept",
+    "sweep": "Sweep",
+    "alias": "Alias",
+    "address": "Address",
+    "energy": "Energy",
+    "energySource": "Energy source",
+    "energySrc": "Energy src",
+    "energyEstUsed": "Energy est / used",
+    "cost": "Cost (TRX)",
+    "attempt": "Attempt",
+    "attemptShort": "#",
+    "error": "Error",
+    "lastError": "Last error",
+    "created": "Created",
+    "updated": "Updated",
+    "broadcast": "Broadcast",
+    "bandwidth": "Bandwidth",
+    "provider": "Provider",
+    "kind": "Kind",
+    "target": "Target",
+    "order": "Order",
+    "expires": "Expires",
+    "onchain": "On-chain",
+    "usdtBalance": "USDT balance",
+    "lastDeposit": "Last deposit",
+    "actions": "Actions",
+    "when": "When",
+    "actor": "Actor",
+    "action": "Action",
+    "subject": "Subject",
+    "details": "Details",
+    "ip": "IP",
+    "queue": "Queue",
+    "waiting": "Waiting",
+    "active": "Active",
+    "delayed": "Delayed",
+    "failed": "Failed",
+    "health": "Health",
+    "balanceTrx": "Balance (TRX)",
+    "detail": "Detail",
+    "hex": "Hex",
+    "derivationIndex": "Derivation index",
+    "balanceChecked": "Balance checked",
+    "externalId": "Your reference",
+    "note": "Note",
+    "createdBy": "Created by",
+    "energyUsed": "Energy used"
+  },
+  "page": {
+    "wallet": {
+      "title": "Wallet",
+      "notInitializedTitle": "The wallet is not set up yet",
+      "notInitializedIntro": "Create a new wallet or import an existing recovery phrase. Deposit addresses are derived from it.",
+      "createTitle": "Create a new wallet",
+      "createIntro": "A new recovery phrase will be generated. It is shown only once, right after creation.",
+      "wordsLabel": "Phrase length",
+      "wordsOption": "{{n}} words",
+      "createButton": "Create new wallet",
+      "phraseTitle": "Your recovery phrase",
+      "phraseWarningTitle": "Write these words down now — they are shown only once",
+      "phraseWarning": "The phrase is not stored anywhere in readable form and cannot be shown again. Anyone who has it controls all funds of this wallet. Keep it offline and never share it.",
+      "copyPhrase": "Copy phrase",
+      "copyFailed": "Could not copy — select the words and copy them manually",
+      "firstAddress": "First address",
+      "savedCheckbox": "I have written the phrase down in a safe place",
+      "continue": "Continue",
+      "importTitle": "Import a wallet",
+      "importIntro": "Paste the 12- or 24-word recovery phrase of an existing wallet.",
+      "mnemonicLabel": "Recovery phrase",
+      "mnemonicPlaceholder": "word word word …",
+      "mnemonicRequired": "Enter the recovery phrase",
+      "mnemonicInvalid": "Invalid recovery phrase",
+      "importButton": "Import wallet",
+      "imported": "Wallet imported. First address: {{address}}",
+      "alreadyInitialized": "The wallet is already set up",
+      "mainTitle": "Main wallet",
+      "mainAddress": "Main wallet address",
+      "mainUsdtBalance": "USDT balance",
+      "mainTrxBalance": "TRX balance",
+      "mainIntro": "Swept client USDT arrives here and payouts are sent from here. No TRX is needed on this address. Payouts go through a one-time address, so the recipient never sees this wallet.",
+      "mainNotActivated": "The address is not active on the network yet — it becomes active after the first transfer arrives.",
+      "collectorExternal": "Sweeps go to the external cold address <addr/> ({{collectorUsdt}} USDT)",
+      "makePayout": "Make a payout",
+      "allPayouts": "All payouts",
+      "addressesTitle": "Client addresses",
+      "network": "Network",
+      "xpub": "Extended public key (xpub)",
+      "addressesIssued": "Addresses issued",
+      "createAddress": "Create address",
+      "allAddresses": "All addresses",
+      "newAddressTitle": "New deposit address",
+      "sendHint": "Send USDT (TRC-20) to this address",
+      "poolTitle": "Pool (TRX for fees)",
+      "poolAddress": "Pool address",
+      "poolTrxBalance": "TRX balance",
+      "poolEnergyAvailable": "Energy available",
+      "poolIntro": "The system pays address activations and energy from here. Top this address up with TRX — at least {{minTrx}} TRX recommended. Do not send USDT here.",
+      "poolLowBalance": "Pool TRX is low",
+      "poolLowBalanceHint": "Below {{minTrx}} TRX activations and energy purchases may start failing. Top the pool up with TRX.",
+      "poolNotActivated": "The address is not active on the network yet — it becomes active after the first TRX arrives.",
+      "poolStaking": "Staking & energy"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "updatedAuto": "updated {{time}} · auto-refresh {{seconds}}s",
+      "loadFailed": "Failed to load dashboard",
+      "recalc": "Recalculate balances",
+      "recalcContent": "Re-read balanceOf() from chain for all assigned addresses. This runs asynchronously in the background.",
+      "recalcDone": "Queued {{n}} balance refresh jobs",
+      "sweepAll": "Sweep all above threshold",
+      "sweepAllContent": "Plan a sweep for every address whose USDT balance is at or above the configured minimum. Energy will be rented/used according to settings.",
+      "sweepAllDone": "Planned {{n}} sweeps",
+      "collector": "Collector",
+      "depositAddresses": "Deposit addresses",
+      "usdtOnAddresses": "USDT on addresses",
+      "total": "Total",
+      "assigned": "Assigned",
+      "withBalance": "With balance",
+      "watcher": "Watcher",
+      "lagBlocks": "Lag (blocks)",
+      "solidBlock": "Solid block",
+      "cursor": "Cursor",
+      "updated": "updated",
+      "lagWarn": "Watcher is {{lag}} blocks behind (> {{max}})",
+      "sweeps24h": "Sweeps, last 24h",
+      "costTrx": "Cost (TRX)",
+      "count": "Count",
+      "confirmed": "Confirmed",
+      "failed": "Failed",
+      "queues": "Queues",
+      "energyProviders": "Energy providers",
+      "chainParams": "Chain parameters",
+      "energyFee": "Energy fee (SUN)",
+      "bandwidthFee": "Bandwidth fee (SUN)",
+      "createAccountFee": "Create account fee (SUN)",
+      "poolTitle": "Energy pool",
+      "poolEnergyAvailable": "Energy available",
+      "poolTrxBalance": "TRX balance",
+      "poolOpen": "Open pool page"
+    },
+    "addresses": {
+      "title": "Addresses",
+      "searchPlaceholder": "alias / address",
+      "statusPlaceholder": "status",
+      "withBalance": "with balance",
+      "unsweptOlderThan": "unswept older than (h)",
+      "hoursPlaceholder": "hours",
+      "createAddress": "Create address",
+      "createTitle": "Create address",
+      "create": "Create",
+      "aliasLabel": "Alias",
+      "aliasPattern": "letters, digits, . _ : - only",
+      "aliasExtra": "Idempotent: an existing alias returns its current address.",
+      "aliasPlaceholder": "client-123",
+      "metadataLabel": "Metadata (JSON object, optional)",
+      "metadataMustBeObject": "metadata must be a JSON object",
+      "created": "Address {{address}} for alias {{alias}}",
+      "sweepNow": "Sweep now",
+      "sweepConfirmTitle": "Sweep {{name}}?",
+      "sweepConfirmContent": "Force a sweep of {{amount}} USDT ignoring thresholds.",
+      "sweepPlanned": "Sweep {{id}} planned",
+      "resume": "Resume",
+      "suspend": "Suspend",
+      "resumeConfirm": "Resume {{name}}?",
+      "suspendConfirm": "Suspend {{name}}?",
+      "resumed": "Address resumed",
+      "suspended": "Address suspended",
+      "refreshBalance": "Refresh balance",
+      "balanceRefreshed": "Balance refreshed from chain",
+      "checkedAt": "checked {{time}}",
+      "neverChecked": "never checked",
+      "showTitle": "Address {{name}}",
+      "showTitleShort": "Address",
+      "deposits": "Deposits ({{n}})",
+      "sweeps": "Sweeps ({{n}})"
+    },
+    "deposits": {
+      "title": "Deposits",
+      "statusPlaceholder": "status",
+      "aliasPlaceholder": "alias",
+      "txIdPlaceholder": "tx id",
+      "sweepLink": "sweep {{id}}"
+    },
+    "sweeps": {
+      "title": "Sweeps",
+      "statusPlaceholder": "status",
+      "aliasPlaceholder": "alias",
+      "showTitle": "Sweep {{id}}",
+      "showTitleShort": "Sweep",
+      "retry": "Retry",
+      "retryConfirm": "Retry sweep {{id}}?",
+      "requeued": "Sweep re-queued",
+      "cancel": "Cancel",
+      "cancelConfirm": "Cancel sweep {{id}}?",
+      "cancelContent": "The sweep becomes abandoned and any rented energy is reclaimed.",
+      "cancelOk": "Cancel sweep",
+      "cancelled": "Sweep cancelled",
+      "rebuild": "Rebuild",
+      "rebuildConfirm": "Rebuild sweep {{id}}?",
+      "rebuildContent": "A new sweep is created; this one is marked superseded.",
+      "rebuilt": "New sweep {{id}} created",
+      "lastError": "Last error",
+      "toCollector": "To (collector)",
+      "bandwidthUsed": "Bandwidth used",
+      "resourceCost": "Resource cost (TRX)",
+      "trxBurned": "TRX burned",
+      "totalCost": "Total cost (TRX)",
+      "findInAddresses": "find in addresses",
+      "resourceOps": "Resource operations ({{n}})",
+      "deposits": "Deposits ({{n}})"
+    },
+    "payouts": {
+      "title": "Payouts",
+      "statusPlaceholder": "status",
+      "toPlaceholder": "recipient address",
+      "newPayout": "New payout",
+      "createTitle": "New payout",
+      "toLabel": "Recipient address",
+      "toExtra": "TRON address (TRC-20): starts with T, 34 characters.",
+      "toInvalid": "Invalid TRON address: must start with T and be 34 characters long",
+      "amountLabel": "Amount (USDT)",
+      "amountInvalid": "Decimal number with at most 6 fractional digits",
+      "amountPositive": "Amount must be greater than 0",
+      "externalIdLabel": "Your reference",
+      "externalIdExtra": "Unique payout id on your side. Submitting the same reference again returns the same payout instead of creating a second one.",
+      "noteLabel": "Note",
+      "notePlaceholder": "optional",
+      "submit": "Send",
+      "rejected": "Payout rejected",
+      "walletNotReady": "The payout wallet is not set up: {{message}}",
+      "created": "Payout of {{amount}} USDT created ({{id}})",
+      "alreadyExists": "A payout with reference {{id}} already exists — showing it",
+      "retry": "Retry",
+      "retryConfirm": "Retry payout {{id}}?",
+      "requeued": "Payout re-queued",
+      "cancel": "Cancel",
+      "cancelConfirm": "Cancel payout {{id}}?",
+      "cancelContent": "The payout is cancelled and any rented energy is reclaimed. It cannot be cancelled once step 1 has been broadcast.",
+      "cancelOk": "Cancel payout",
+      "cancelled": "Payout cancelled",
+      "showTitle": "Payout {{id}}",
+      "showTitleShort": "Payout",
+      "lastError": "Last error",
+      "resourceCost": "Resource cost (TRX)",
+      "resourceOps": "Resource operations ({{n}})",
+      "twoHopInfo": "Payouts take two hops through a one-time address so the recipient never sees the main wallet.",
+      "stageValue": "{{stage}}/2",
+      "hop1Short": "step 1",
+      "hop2Short": "step 2"
+    },
+    "resources": {
+      "title": "Resource operations",
+      "kindPlaceholder": "kind",
+      "statusPlaceholder": "status",
+      "providerPlaceholder": "provider",
+      "sweepIdPlaceholder": "sweep id"
+    },
+    "settings": {
+      "title": "Settings",
+      "noChanges": "No changes",
+      "saved": "Saved {{fields}}",
+      "saveFailed": "Save failed",
+      "readOnly": "Read-only: your role is {{role}}; admin role is required to change settings.",
+      "disabledSuffix": "(disabled)",
+      "sweepPolicy": "Sweep policy",
+      "sweepMin": "Sweep min (USDT)",
+      "sweepMinExtra": "Addresses at or above this balance are swept automatically.",
+      "sweepMaxAge": "Sweep max age (hours)",
+      "sweepMaxAgeExtra": "Sweep smaller balances once they are older than this.",
+      "sweepMaxPerHour": "Sweeps per hour (0 = unlimited)",
+      "minDeposit": "Min deposit (USDT)",
+      "minDepositExtra": "Smaller transfers are recorded as rejected (dust).",
+      "payouts": "Payouts",
+      "payoutMax": "Max payout (USDT)",
+      "payoutMaxExtra": "Limit for a single payout; 0 = unlimited.",
+      "payoutDailyMax": "Daily payout limit (USDT)",
+      "payoutDailyMaxExtra": "Total of all payouts per day; 0 = unlimited.",
+      "energyFees": "Energy and fees",
+      "feeLimit": "Fee limit (SUN)",
+      "feeLimitExtra": "fee_limit for the TRC-20 transfer transaction.",
+      "energyMargin": "Energy margin (1–3)",
+      "energyMarginExtra": "Multiplier on the energy estimate.",
+      "dailyBudget": "Energy daily budget (SUN)",
+      "providerOrder": "Provider order",
+      "providerOrderExtra": "Energy providers are tried in this order.",
+      "providerOrderPlaceholder": "e.g. itrx, own_pool",
+      "burnEnabled": "Allow TRX burn fallback",
+      "leaveDust": "Leave dust on address",
+      "save": "Save",
+      "reset": "Reset",
+      "itrxTitle": "Energy rental — itrx.io",
+      "itrxIntro": "Rentals are paid from your itrx.io account balance. Keys are issued in your <link>https://itrx.io</link> account (API section). Mainnet only.",
+      "itrxApiKey": "API key",
+      "itrxApiSecret": "API secret",
+      "itrxApiSecretExtra": "Stored write-only; leave empty to keep the current one.",
+      "itrxSecretSetPlaceholder": "saved, type a new one to replace",
+      "itrxSecretUnsetPlaceholder": "not set",
+      "itrxRentPeriod": "Rent period",
+      "itrxRentPeriodExtra": "How long the rented energy lasts.",
+      "itrxRentPeriod1H": "1 hour (1H)",
+      "itrxRentPeriod1D": "1 day (1D)",
+      "itrxFirst": "Use itrx.io first",
+      "itrxFirstExtra": "Puts itrx at the front of the provider order below; unchecked removes it.",
+      "itrxTest": "Test connection",
+      "itrxTestExtra": "Checks the saved keys against itrx.io (save first after editing).",
+      "itrxTestOk": "itrx.io connection OK",
+      "itrxTestFailed": "itrx.io connection failed",
+      "itrxUnitPrice": "Price per energy: {{sun}} SUN",
+      "itrxTransferCost": "Cost per USDT transfer: {{trx}} TRX",
+      "itrxBalance": "itrx.io balance: {{trx}} TRX"
+    },
+    "audit": {
+      "title": "Audit log"
+    },
+    "pool": {
+      "title": "Energy pool",
+      "loadFailed": "Failed to load the energy pool",
+      "notConfigured": "Energy pool is not configured",
+      "notConfiguredHint": "Configure the pool wallet in Core to enable staking.",
+      "address": "Pool address",
+      "trxBalance": "TRX balance",
+      "trxBalanceSun": "{{sun}} SUN",
+      "energy": "Energy",
+      "energyUsedOf": "{{used}} / {{limit}} used",
+      "energyAvailable": "Energy available",
+      "energyLimit": "Energy limit",
+      "energyUsed": "Energy used",
+      "bandwidthAvailable": "Bandwidth available",
+      "stakedEnergy": "Staked for energy (TRX)",
+      "stakedBandwidth": "Staked for bandwidth (TRX)",
+      "delegatedOut": "Delegated out, energy (TRX)",
+      "energyPerTrx": "Energy per TRX per day",
+      "sweepsPerDay": "Estimated sweeps per day",
+      "helper": "≈ {{perTrx}} energy per staked TRX per day; one USDT transfer needs ~65 000",
+      "stake": "Stake",
+      "unstake": "Unstake",
+      "stakeTitle": "Stake TRX",
+      "unstakeTitle": "Unstake TRX",
+      "amount": "Amount (TRX)",
+      "resource": "Resource",
+      "amountRequired": "Amount is required",
+      "amountPositive": "Amount must be greater than 0",
+      "stakeConfirmTitle": "Stake {{amount}} TRX for {{resource}}?",
+      "stakeConfirmContent": "The pool wallet freezes {{amount}} TRX (FreezeBalanceV2) to obtain {{resource}}.",
+      "unstakeConfirmTitle": "Unstake {{amount}} TRX from {{resource}}?",
+      "unstakeConfirmContent": "The pool wallet unfreezes {{amount}} TRX (UnfreezeBalanceV2). TRX returns after the network's unstaking period, about 14 days.",
+      "stakeDone": "Stake transaction sent",
+      "unstakeDone": "Unstake transaction sent",
+      "txLabel": "Transaction",
+      "operatorOnly": "Operator role required",
+      "unstakeNote": "Unstaked TRX becomes available after ~14 days."
+    },
+    "backup": {
+      "title": "Label export and chain recovery",
+      "intro": "Use scripts/backup.sh for a full server backup and scripts/restore.sh to restore it (see README). Here you can separately export address names and payout notes. Chain recovery is an emergency option; it does not restore settings or complete history.",
+      "downloadJson": "Download labels (JSON)",
+      "downloadCsv": "Download labels (CSV)",
+      "restore": "Restore labels from JSON",
+      "restored": "Labels applied: {{applied}}, skipped: {{skipped}}",
+      "scan": "Recover from chain",
+      "scanConfirmTitle": "Rebuild from the blockchain?",
+      "scanConfirmContent": "Derives addresses from the seed phrase, asks TronGrid for their USDT history, recreates addresses, deposits and sweeps, and returns any USDT stuck on one-time payout addresses to the main wallet. Safe to run repeatedly.",
+      "scanQueued": "Recovery scan started",
+      "state": {
+        "running": "Recovery running: {{phase}}",
+        "done": "Recovery finished",
+        "failed": "Recovery failed"
+      },
+      "summary": "Addresses scanned {{addressesScanned}}, recovered {{addressesRecovered}}; deposits {{depositsIngested}}; sweeps {{sweepsRecovered}}; hop addresses scanned {{hopsScanned}}, returned {{hopsRecovered}}."
+    }
+  },
+  "setup": {
+    "title": "First-run setup",
+    "stepAccount": "Administrator",
+    "stepTotp": "Authenticator",
+    "stepDone": "Done",
+    "introAccount": "No administrator exists yet. Create the first account: the setup token proves you control this server.",
+    "tokenLabel": "Setup token",
+    "usernameLabel": "Username",
+    "usernameRule": "2–64 characters: letters, digits, . _ @ -",
+    "passwordLabel": "Password",
+    "passwordHint": "At least 12 characters. It is used together with an authenticator code.",
+    "passwordRule": "At least 12 characters",
+    "confirmLabel": "Repeat password",
+    "passwordMismatch": "Passwords do not match",
+    "next": "Continue",
+    "introTotp": "Scan the QR code with Google Authenticator, Aegis, 1Password or any TOTP app, then enter the 6-digit code it shows.",
+    "manualKey": "Or enter this key manually:",
+    "finish": "Create account and sign in",
+    "done": "Administrator created. Signing you in…",
+    "tokenHintEnv": "The value of SETUP_TOKEN from your .env (you chose it yourself; it is used only once).",
+    "tokenMissingTitle": "SETUP_TOKEN is not set",
+    "tokenMissingText": "Add a line like this to .env (any 8+ characters), restart core (docker compose --profile full up -d core) and reload this page:",
+    "stepNetwork": "Network",
+    "networkLabel": "Tron network",
+    "networkMainnet": "MAINNET — real money",
+    "networkNile": "Nile testnet — test coins",
+    "networkMainnetHint": "Every transfer is real USDT/TRX.",
+    "networkNileHint": "Free test coins from the faucet; use it to try the flow before going live.",
+    "rpcLabel": "RPC",
+    "rpcOk": "connected, block {{block}} ({{ms}} ms)",
+    "rpcFail": "no connection",
+    "rpcFailTitle": "Core cannot reach the Tron RPC",
+    "keySet": "TronGrid key set",
+    "keyMissing": "no TronGrid key",
+    "keyTitle": "TronGrid API key",
+    "keyText": "The service reads the chain through TronGrid. Without a key TronGrid limits requests per IP: fine for a quick test on Nile, not enough for mainnet (the watcher polls every 3 s). Register at trongrid.io, create a free API key, add it to .env and restart:",
+    "switchToMainnet": "Switch to mainnet (real money)",
+    "switchToNile": "Switch to Nile testnet",
+    "switchText": "The network is read from .env when the containers start. Put these lines into .env, then restart:",
+    "switchRefresh": "This page re-checks every 5 seconds and will show the new network once core is back. Switch networks only on a fresh install (scripts/reset.sh): test and real addresses must not mix.",
+    "continueMainnet": "Continue on MAINNET",
+    "continueNile": "Continue on Nile testnet"
+  }
+}

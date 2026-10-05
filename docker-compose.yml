@@ -1,0 +1,151 @@
+# Complete stack: scripts/install.sh. Secrets come from .env.
+services:
+  postgres:
+    restart: unless-stopped
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: usdt
+      POSTGRES_PASSWORD: usdt
+      POSTGRES_DB: usdt_trx
+    # Loopback only: the default password is for local development; never expose it on a public interface.
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U usdt -d usdt_trx"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    restart: unless-stopped
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory-policy", "noeviction"]
+    # Loopback only: Redis has no authentication and holds the job queues.
+    ports:
+      - "127.0.0.1:${REDIS_PORT:-6380}:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  signer:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: apps/signer/Dockerfile
+    profiles: ["full"]
+    env_file: .env
+    environment:
+      SIGNER_HOST: 0.0.0.0
+      SEED_FILE: /secrets/seed.enc.json
+      POOL_KEY_FILE: /secrets/pool.enc.json
+      AUDIT_LOG_PATH: /audit/signer-audit.log
+    volumes:
+      # Writable: the encrypted seed file is created here on first wallet create/import from the admin UI.
+      # Switch to `:ro` once the wallet exists.
+      - ./secrets:/secrets
+      - signeraudit:/audit
+    networks:
+      - signer-net
+    # The signer has no route to the internet: only core can reach it.
+
+  migrate:
+    build:
+      context: .
+      dockerfile: apps/core/Dockerfile
+    profiles: ["full"]
+    env_file: .env
+    command: ["./node_modules/.bin/prisma", "migrate", "deploy"]
+    environment:
+      DATABASE_URL: postgresql://usdt:usdt@postgres:5432/usdt_trx
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  core:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: apps/core/Dockerfile
+    profiles: ["full"]
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: "3000"
+      RUN_WORKERS: ${RUN_WORKERS:-true}
+      SIGNER_URL: http://signer:3100
+      # In-cluster service names override the host-development URLs from .env.
+      DATABASE_URL: postgresql://usdt:usdt@postgres:5432/usdt_trx
+      REDIS_URL: redis://redis:6379
+      # The bundled nginx (admin service) is the only ingress: it overwrites X-Forwarded-For, so one hop is trusted.
+      TRUST_PROXY: "1"
+      LABELS_FILE: /backup/labels.json
+    volumes:
+      # Optional label export; full backups also include the database and secrets.
+      - ./backup:/backup
+    # Loopback only: the operator reaches Core through the `admin` nginx (TLS terminates there or in front of it).
+    ports:
+      - "127.0.0.1:${CORE_PORT:-${PORT:-3000}}:3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/health').then(async r => { if (!r.ok || !(await r.json()).ok) process.exit(1) }).catch(() => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+      signer:
+        condition: service_started
+    networks:
+      - default
+      - signer-net
+
+  watcher:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: apps/core/Dockerfile
+    profiles: ["full"]
+    env_file: .env
+    command: ["node", "dist/watcher.main.js"]
+    environment:
+      DATABASE_URL: postgresql://usdt:usdt@postgres:5432/usdt_trx
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      core:
+        condition: service_healthy
+    # The watcher never talks to the signer, so it is not on signer-net.
+
+  admin:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: apps/admin/Dockerfile
+    profiles: ["full"]
+    # OrbStack: reachable as https://usdt.local (custom domain) and https://admin.usdt-trx.orb.local (default).
+    labels:
+      dev.orbstack.domains: usdt.local
+    ports:
+      - "127.0.0.1:${ADMIN_PORT:-8080}:80"
+    depends_on:
+      core:
+        condition: service_healthy
+
+networks:
+  signer-net:
+    internal: true
+
+volumes:
+  pgdata:
+  redisdata:
+  signeraudit:
