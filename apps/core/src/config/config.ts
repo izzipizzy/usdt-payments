@@ -125,7 +125,7 @@ const EnvSchema = z.object({
 
   WATCHER_START_BLOCK: z.coerce.number().int().optional(),
   WATCHER_BATCH_BLOCKS: z.coerce.number().int().default(20),
-  WATCHER_POLL_MS: z.coerce.number().int().default(3000),
+  WATCHER_POLL_MS: z.coerce.number().int().min(1000).default(15000),
   WATCHER_LAG_ALERT_BLOCKS: z.coerce.number().int().default(40),
 
   TX_TTL_MS: z.coerce.number().int().default(10 * 60_000),

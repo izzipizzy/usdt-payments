@@ -230,6 +230,8 @@ docker compose --profile full stop
 
 `RUN_WORKERS=false` выключает обработчики очередей и планировщик; **watcher остаётся включённым**. Для полного отключения сканера используйте `docker compose --profile full stop watcher`.
 
+Watcher проверяет новые подтверждённые блоки раз в **15 секунд** (`WATCHER_POLL_MS=15000`), затем читает все блоки после сохранённой позиции. Платежи не пропускаются; к задержке подтверждения сети добавляется до 15 секунд ожидания проверки. Частоту можно изменить в `.env`; после этого пересоздайте watcher: `docker compose --profile full up -d --force-recreate watcher`.
+
 `PORT` задаёт порт API на хосте; если 3000 занят, укажите 3001. `ADMIN_PORT` задаёт порт админки (по умолчанию 8080). Внутри Docker Core всегда слушает 3000; signer доступен только во внутренней сети. Compose задаёт контейнерные пути к seed, ключу пула и ярлыкам.
 
 TronGrid: `TRONGRID_API_KEY`; mainnet — `NETWORK=mainnet`, `TRON_RPC_URLS=https://api.trongrid.io`. Ключ применяется и к RPC, и к запросам истории. Для itrx.io можно задать `ITRX_API_KEY`, `ITRX_API_SECRET`, `ITRX_RENT_PERIOD=1H`, `PROVIDER_ORDER=itrx,own_pool` в `.env`, но сохранённые настройки из админки имеют приоритет. Callback необязателен, `ITRX_CALLBACK_URL` можно оставить пустым. Без itrx.io используйте `PROVIDER_ORDER=own_pool` и стейкинг пула под Energy.
@@ -565,6 +567,8 @@ Services restart with Docker. Technical details and a separate testnet installat
 <summary>Developer and technical details</summary>
 
 `RUN_WORKERS=false` disables queue workers and the scheduler; **the watcher stays enabled**. Stop scanning explicitly with `docker compose --profile full stop watcher`.
+
+The watcher checks for new solidified blocks every **15 seconds** (`WATCHER_POLL_MS=15000`), then reads every block after its saved cursor. Payments are not skipped; polling adds up to 15 seconds to network confirmation latency. Change the interval in `.env` and recreate the watcher with `docker compose --profile full up -d --force-recreate watcher`.
 
 `PORT` selects the host API port; use 3001 if 3000 is taken. `ADMIN_PORT` defaults to 8080. Core uses port 3000 inside Docker, and signer is on an internal network. Compose sets container paths for secrets and labels.
 

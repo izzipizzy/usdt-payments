@@ -1,8 +1,8 @@
-import { ConflictException, Inject, Injectable, UnprocessableEntityException } from '@nestjs/common';
+import { ConflictException, Inject, Injectable, ServiceUnavailableException, UnprocessableEntityException } from '@nestjs/common';
 import { formatTrx, formatUsdt, parseTrx } from '@usdt-trx/shared';
 import { CONFIG, type AppConfig } from '../config/config.js';
 import { PrismaService } from '../prisma/prisma.service.js';
-import { CollectorService, SignerClient, SignerPolicyError, type WalletStatus } from '../signer/signer.client.js';
+import { CollectorService, SignerClient, SignerPolicyError } from '../signer/signer.client.js';
 import { TronNodeClient } from '../tron/tron-node.client.js';
 import { AddressesService } from '../addresses/addresses.service.js';
 import { AuditService } from '../common/audit.service.js';
@@ -45,17 +45,17 @@ export class WalletService {
 
   async status(): Promise<WalletStatusDto> {
     const [remote, issued, collectorUsdt] = await Promise.all([
-      this.signer.walletStatus().catch(
-        (): WalletStatus => ({ initialized: false, network: this.cfg.network, xpub: null, poolAddress: null, payoutAddress: null, mainAddress: null, collectorAddress: null, collectorExternal: false }),
-      ),
+      this.signer.walletStatus().catch(() => {
+        throw new ServiceUnavailableException('Wallet signer is temporarily unavailable. Retry when the signer is running.');
+      }),
       this.prisma.depositAddress.count({ where: { status: { in: ['assigned', 'suspended'] } } }),
-      this.collector.get().then((c) => (c ? this.node.usdtBalanceOf(c).catch(() => 0n) : 0n)),
+      this.collector.get().then((c) => (c ? this.node.usdtBalanceOf(c).catch(this.mapNetworkError) : 0n)),
     ]);
     const collectorAddress = await this.collector.get();
     let pool: WalletStatusDto['pool'] = null;
     const poolAddress = remote.initialized ? await this.poolAddr.get() : null;
     if (poolAddress) {
-      const [acc, res] = await Promise.all([this.node.getAccount(poolAddress).catch(() => null), this.node.getAccountResource(poolAddress).catch(() => null)]);
+      const [acc, res] = await Promise.all([this.node.getAccount(poolAddress).catch(this.mapNetworkError), this.node.getAccountResource(poolAddress).catch(this.mapNetworkError)]);
       const balance = acc?.balanceSun ?? 0n;
       pool = {
         address: poolAddress,
@@ -69,7 +69,7 @@ export class WalletService {
     }
     let payout: WalletStatusDto['payout'] = null;
     if (remote.initialized && remote.payoutAddress) {
-      const [acc, usdt] = await Promise.all([this.node.getAccount(remote.payoutAddress).catch(() => null), this.node.usdtBalanceOf(remote.payoutAddress).catch(() => 0n)]);
+      const [acc, usdt] = await Promise.all([this.node.getAccount(remote.payoutAddress).catch(this.mapNetworkError), this.node.usdtBalanceOf(remote.payoutAddress).catch(this.mapNetworkError)]);
       payout = {
         address: remote.payoutAddress,
         explorerUrl: explorerAddress(this.cfg.network, remote.payoutAddress),
@@ -113,6 +113,10 @@ export class WalletService {
     await this.recovery.enqueue(actor).catch(() => false);
     return res;
   }
+
+  private mapNetworkError = (): never => {
+    throw new ServiceUnavailableException('Cannot read TRON network data. Check the TronGrid API key, request limits and connection, then retry.');
+  };
 
   private mapError = (e: unknown): never => {
     if (e instanceof SignerPolicyError) {

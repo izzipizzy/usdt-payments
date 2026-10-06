@@ -433,7 +433,7 @@
       "mainUsdtBalance": "USDT balance",
       "mainTrxBalance": "TRX balance",
       "mainIntro": "Swept client USDT arrives here and payouts are sent from here. No TRX is needed on this address. Payouts go through a one-time address, so the recipient never sees this wallet.",
-      "mainNotActivated": "The address is not active on the network yet — it becomes active after the first transfer arrives.",
+      "mainNotActivated": "TRON reports this address as inactive. Receiving USDT alone does not activate an account.",
       "collectorExternal": "Sweeps go to the external cold address <addr/> ({{collectorUsdt}} USDT)",
       "makePayout": "Make a payout",
       "allPayouts": "All payouts",

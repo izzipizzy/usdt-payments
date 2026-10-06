@@ -415,13 +415,13 @@ export const WalletPage = () => {
           }
         />
       )}
-      {wallet && wallet.initialized && (
+      {wallet && !error && wallet.initialized && (
         <>
           <WalletStatus wallet={wallet} onRefresh={reload} />
           <BackupCard />
         </>
       )}
-      {wallet && !wallet.initialized && (
+      {wallet && !error && !wallet.initialized && (
         <Space direction="vertical" size="middle" style={{ width: '100%' }}>
           <Alert type="info" showIcon message={t('page.wallet.notInitializedTitle')} description={t('page.wallet.notInitializedIntro')} />
           <Row gutter={[16, 16]}>
