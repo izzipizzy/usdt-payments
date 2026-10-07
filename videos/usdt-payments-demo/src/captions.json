@@ -1,0 +1,135 @@
+[
+  {
+    "text": " Ю эс ди ти пэйментс Приём и выплаты в сети Трон На вашем сервере",
+    "startMs": 700,
+    "endMs": 6623,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Для каждого счёта создайте отдельный адрес и передайте его",
+    "startMs": 8700,
+    "endMs": 12214,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " клиенту Для постоянного клиента можно использовать один адрес",
+    "startMs": 12114,
+    "endMs": 16655,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " повторно Оплата ю эс ди ти в сети Трон",
+    "startMs": 16555,
+    "endMs": 20486,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Сканер обнаруживает подтверждённый перевод В админке видно кто",
+    "startMs": 22700,
+    "endMs": 27449,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " заплатил сколько пришло и на какой адрес Поступления сохраняются",
+    "startMs": 27349,
+    "endMs": 32079,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " в истории",
+    "startMs": 31979,
+    "endMs": 32692,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Средства автоматически собираются на основной кошелёк по сумме",
+    "startMs": 34700,
+    "endMs": 38151,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " или времени Сбор можно запустить вручную Статус и транзакция",
+    "startMs": 38051,
+    "endMs": 43608,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " видны в админке",
+    "startMs": 43508,
+    "endMs": 44459,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Пул с троном оплачивает сетевые расходы Подключите аренду энергии",
+    "startMs": 46700,
+    "endMs": 51669,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " через ай трикс Автопополнение переводит нужную сумму из пула в",
+    "startMs": 51569,
+    "endMs": 55940,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " сервис",
+    "startMs": 55840,
+    "endMs": 56437,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Для выплаты укажите адрес получателя сумму и номер заявки Сервис",
+    "startMs": 58700,
+    "endMs": 63981,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " выделяет промежуточный адрес и выполняет перевод в два этапа",
+    "startMs": 63882,
+    "endMs": 67315,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Повтор номера не создаёт новую выплату",
+    "startMs": 68060,
+    "endMs": 70498,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Ключи хранит отдельный подписант Вход защищён паролем и",
+    "startMs": 72700,
+    "endMs": 76985,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " аутентификатором При установке включается ежедневный бэкап семь",
+    "startMs": 76885,
+    "endMs": 81220,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " копий Исходники на Гитхаб",
+    "startMs": 81120,
+    "endMs": 83978,
+    "timestampMs": null,
+    "confidence": null
+  }
+]

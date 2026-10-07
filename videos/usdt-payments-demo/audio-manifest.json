@@ -1,0 +1,44 @@
+[
+  {
+    "scene": 1,
+    "durationSeconds": 6.67,
+    "rate": 16,
+    "voice": "ru-RU-DmitryNeural"
+  },
+  {
+    "scene": 2,
+    "durationSeconds": 12.65,
+    "rate": 8,
+    "voice": "ru-RU-DmitryNeural"
+  },
+  {
+    "scene": 3,
+    "durationSeconds": 10.8,
+    "rate": 8,
+    "voice": "ru-RU-DmitryNeural"
+  },
+  {
+    "scene": 4,
+    "durationSeconds": 10.49,
+    "rate": 16,
+    "voice": "ru-RU-DmitryNeural"
+  },
+  {
+    "scene": 5,
+    "durationSeconds": 10.54,
+    "rate": 8,
+    "voice": "ru-RU-DmitryNeural"
+  },
+  {
+    "scene": 6,
+    "durationSeconds": 12.65,
+    "rate": 8,
+    "voice": "ru-RU-DmitryNeural"
+  },
+  {
+    "scene": 7,
+    "durationSeconds": 12.07,
+    "rate": 16,
+    "voice": "ru-RU-DmitryNeural"
+  }
+]

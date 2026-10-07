@@ -1,0 +1,7 @@
+node_modules/
+.venv-audio/
+out/
+dist/
+.DS_Store
+public/audio/*.mp3
+public/audio/*.boundaries.json

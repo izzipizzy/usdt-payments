@@ -6,6 +6,12 @@
 
 Платёжная система для приёма и отправки USDT (TRC-20), которую вы запускаете на своём компьютере или сервере. Веб-админка позволяет выдавать адреса для оплаты, отслеживать поступления, собирать средства и управлять выплатами. Ключи и данные хранятся на вашей установке.
 
+**[Смотреть или скачать видео — 85 секунд, русская озвучка](docs/media/usdt-payments-demo-ru.mp4)**
+
+[![Видеопрезентация usdt-payments](docs/media/usdt-payments-demo-poster.png)](docs/media/usdt-payments-demo-ru.mp4)
+
+[Субтитры SRT](docs/media/usdt-payments-demo-ru.srt) · [Исходники ролика](videos/usdt-payments-demo/README.md)
+
 Руководство ведёт от установки до первого платежа в **mainnet**. Настройка тестовой сети описана в конце.
 
 **[Первый запуск](#1-подготовьте-компьютер):** шаги 1–6. **[Работа с деньгами](#7-создайте-адрес-для-получения-usdt):** шаги 7–9. **[Бэкап и восстановление](#10-сохраняйте-полный-бэкап):** шаги 10–11.
@@ -345,6 +351,12 @@ API: [docs/admin-api.md](docs/admin-api.md). Параметры: [.env.example](
 ## English
 
 A self-hosted payment system for receiving and sending USDT (TRC-20). The web admin lets you issue payment addresses, track deposits, collect funds and manage payouts. Keys and data remain on your installation.
+
+**[Watch or download the 85-second demo (Russian narration)](docs/media/usdt-payments-demo-ru.mp4)**
+
+[![usdt-payments video demo](docs/media/usdt-payments-demo-poster.png)](docs/media/usdt-payments-demo-ru.mp4)
+
+[Russian subtitles (SRT)](docs/media/usdt-payments-demo-ru.srt) · [Video source](videos/usdt-payments-demo/README.md)
 
 This guide takes you from installation to your first payment on **mainnet**. Testnet setup is covered at the end.
 
